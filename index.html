@@ -5,35 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Register for After MBBS? Exploring Hidden Treasures, an IMA Parippally online medical conclave exploring global and emerging career opportunities after MBBS."
+      content="Join IMA Parippally Branch's 3-day Online Conclave 2026. Explore 11 career paths after MBBS - GCC, Europe, research, entrepreneurship and more. Register from Rs.249."
     />
-    <title>After MBBS? Exploring Hidden Treasures | IMA Parippally</title>
+    <title>After MBBS? Exploring Hidden Treasures | IMA Parippally 2026</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:ital,wght@0,600;0,700;0,800;0,900;1,700&display=swap"
       rel="stylesheet"
     />
     <style>
       :root {
-        --color-primary: #1a3a5c;
-        --color-accent: #d4a017;
-        --color-bg: #f9f7f4;
+        --color-teal: #00bcd4;
+        --color-teal-dark: #0097a7;
+        --color-teal-deep: #006064;
+        --color-teal-light: #e0f7fa;
+        --color-pink: #e91e8c;
+        --color-pink-dark: #c21872;
+        --color-pink-light: #fce4ec;
+        --color-orange: #ff9800;
+        --color-orange-light: #fff3e0;
+        --color-bg: #ebf4f6;
         --color-surface: #ffffff;
-        --color-text: #1c1c1e;
-        --color-muted: #6b7280;
-        --color-cta: #c0392b;
-        --color-cta-hover: #a93226;
-        --color-success: #128c4a;
-        --color-footer: #0d1f33;
-        --shadow-soft: 0 18px 45px rgba(13, 31, 51, 0.12);
-        --shadow-card: 0 12px 32px rgba(26, 58, 92, 0.1);
-        --radius: 8px;
-        --radius-pill: 999px;
+        --color-text: #1a1a2e;
+        --color-muted: #607d8b;
+        --color-white: #ffffff;
+        --shadow: 0 18px 48px rgba(0, 96, 100, 0.14);
+        --shadow-strong: 0 22px 70px rgba(0, 96, 100, 0.28);
+        --radius: 18px;
+        --pill: 999px;
         --container: 1180px;
-        --nav-height: 76px;
-        --font-display: "Playfair Display", Georgia, serif;
-        --font-body: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        --nav-h: 76px;
+        --font-head: "Poppins", system-ui, sans-serif;
+        --font-body: "Inter", system-ui, sans-serif;
       }
 
       * {
@@ -52,6 +56,7 @@
         line-height: 1.6;
       }
 
+      body.menu-open,
       body.modal-open {
         overflow: hidden;
       }
@@ -72,8 +77,13 @@
         font: inherit;
       }
 
+      button {
+        cursor: pointer;
+      }
+
       section {
-        scroll-margin-top: 96px;
+        position: relative;
+        scroll-margin-top: 92px;
       }
 
       .container {
@@ -82,40 +92,45 @@
       }
 
       .section-pad {
-        padding: 84px 0;
+        padding: 90px 0;
       }
 
       .section-heading {
-        max-width: 760px;
-        margin: 0 auto 42px;
+        max-width: 780px;
+        margin: 0 auto 44px;
         text-align: center;
       }
 
       .section-heading h2 {
         margin: 0;
-        color: var(--color-primary);
-        font-family: var(--font-display);
-        font-size: clamp(2.25rem, 5vw, 3.7rem);
+        color: var(--color-teal-dark);
+        font-family: var(--font-head);
+        font-size: clamp(2rem, 4.8vw, 3.6rem);
+        font-weight: 900;
         line-height: 1.08;
       }
 
       .section-heading p {
-        margin: 14px 0 0;
+        margin: 12px 0 0;
         color: var(--color-muted);
-        font-size: clamp(1rem, 2vw, 1.2rem);
+        font-size: clamp(1rem, 2vw, 1.15rem);
       }
 
       .btn {
+        position: relative;
+        isolation: isolate;
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        min-height: 48px;
-        padding: 0 22px;
-        border: 1px solid transparent;
-        border-radius: var(--radius-pill);
-        cursor: pointer;
+        gap: 10px;
+        min-height: 52px;
+        padding: 0 24px;
+        border: 0;
+        border-radius: var(--pill);
+        font-family: var(--font-head);
         font-weight: 800;
-        transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease, color 180ms ease;
+        overflow: visible;
+        transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
         white-space: nowrap;
       }
 
@@ -123,47 +138,68 @@
         transform: translateY(-2px);
       }
 
-      .btn:focus-visible,
-      a:focus-visible,
-      input:focus-visible,
-      select:focus-visible {
-        outline: 3px solid rgba(212, 160, 23, 0.55);
-        outline-offset: 3px;
+      .btn-pink {
+        background: var(--color-pink);
+        color: var(--color-white);
+        box-shadow: 0 16px 32px rgba(233, 30, 140, 0.28);
       }
 
-      .btn-cta {
-        background: var(--color-cta);
-        color: #ffffff;
-        box-shadow: 0 12px 26px rgba(192, 57, 43, 0.3);
+      .btn-pink:hover {
+        background: var(--color-pink-dark);
       }
 
-      .btn-cta:hover {
-        background: var(--color-cta-hover);
+      .btn-teal {
+        background: var(--color-teal-dark);
+        color: var(--color-white);
+        box-shadow: 0 14px 30px rgba(0, 151, 167, 0.22);
       }
 
-      .btn-outline {
-        border-color: var(--color-accent);
-        background: transparent;
-        color: var(--color-accent);
+      .btn-white {
+        border: 2px solid rgba(255, 255, 255, 0.72);
+        background: var(--color-white);
+        color: var(--color-teal-dark);
       }
 
-      .btn-outline:hover {
-        background: rgba(212, 160, 23, 0.12);
+      .ripple::before,
+      .ripple::after {
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        border: 2px solid rgba(233, 30, 140, 0.34);
+        border-radius: inherit;
+        content: "";
+        animation: ring 2.1s infinite;
+      }
+
+      .ripple::after {
+        animation-delay: 0.7s;
+      }
+
+      .click-ripple {
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.55);
+        pointer-events: none;
+        transform: translate(-50%, -50%);
+        animation: clickBurst 560ms ease-out forwards;
       }
 
       .site-header {
         position: fixed;
         inset: 0 0 auto;
-        z-index: 50;
-        min-height: var(--nav-height);
+        z-index: 900;
+        min-height: var(--nav-h);
+        border-bottom: 1px solid rgba(0, 188, 212, 0.28);
         background: rgba(255, 255, 255, 0.96);
-        backdrop-filter: blur(14px);
-        transition: box-shadow 180ms ease, min-height 180ms ease;
+        backdrop-filter: blur(16px);
+        transition: min-height 180ms ease, box-shadow 180ms ease;
       }
 
       .site-header.scrolled {
-        min-height: 64px;
-        box-shadow: 0 10px 30px rgba(13, 31, 51, 0.12);
+        min-height: 62px;
+        box-shadow: 0 12px 34px rgba(0, 96, 100, 0.16);
       }
 
       .nav {
@@ -179,24 +215,24 @@
         align-items: center;
         gap: 12px;
         min-width: max-content;
-        color: var(--color-primary);
-        font-weight: 900;
       }
 
-      .logo-slot {
+      .logo-slot,
+      .media-slot {
         position: relative;
         display: grid;
         place-items: center;
-        width: 48px;
-        height: 48px;
         overflow: hidden;
-        border: 2px solid rgba(212, 160, 23, 0.5);
-        border-radius: 50%;
-        background: #e5e7eb;
-        color: var(--color-primary);
-        font-size: 0.62rem;
-        font-weight: 800;
+        border: 2px dashed rgba(0, 151, 167, 0.6);
+        background: var(--color-teal-light);
+        color: var(--color-muted);
         text-align: center;
+      }
+
+      .logo-slot {
+        width: 52px;
+        height: 52px;
+        border-radius: 14px;
       }
 
       .logo-slot img,
@@ -211,13 +247,27 @@
         inset: 0;
         display: grid;
         place-items: center;
-        padding: 12px;
-        background: #e5e7eb;
-        color: #4b5563;
-        font-size: 0.78rem;
-        font-weight: 700;
+        padding: 8px;
+        font-size: 0.72rem;
+        font-weight: 800;
         line-height: 1.25;
-        text-align: center;
+      }
+
+      .logo-text {
+        display: grid;
+        line-height: 1.1;
+      }
+
+      .logo-text strong {
+        color: var(--color-teal-dark);
+        font-size: 0.76rem;
+        font-weight: 600;
+      }
+
+      .logo-text span {
+        color: var(--color-pink);
+        font-size: 0.7rem;
+        font-weight: 900;
       }
 
       .image-loaded .image-fallback {
@@ -227,9 +277,9 @@
       .nav-links {
         display: none;
         align-items: center;
-        gap: 24px;
-        color: var(--color-primary);
-        font-weight: 700;
+        gap: 22px;
+        color: var(--color-text);
+        font-weight: 800;
       }
 
       .nav-links a {
@@ -239,10 +289,11 @@
       .nav-links a::after {
         position: absolute;
         right: 0;
-        bottom: -8px;
+        bottom: -9px;
         left: 0;
-        height: 2px;
-        background: var(--color-accent);
+        height: 3px;
+        border-radius: 3px;
+        background: var(--color-teal);
         content: "";
         transform: scaleX(0);
         transform-origin: left;
@@ -257,301 +308,524 @@
         display: none;
       }
 
-      .hero {
-        position: relative;
-        min-height: 100vh;
-        padding: calc(var(--nav-height) + 44px) 0 52px;
-        overflow: hidden;
-        background:
-          radial-gradient(circle at 18% 20%, rgba(255, 255, 255, 0.16), transparent 28%),
-          radial-gradient(circle at 80% 26%, rgba(212, 160, 23, 0.2), transparent 32%),
-          var(--color-primary);
-        color: #ffffff;
+      .menu-toggle {
+        display: inline-grid;
+        place-items: center;
+        width: 44px;
+        height: 44px;
+        border: 0;
+        border-radius: 50%;
+        background: var(--color-teal-light);
+        color: var(--color-teal-deep);
+        font-size: 1.35rem;
+        font-weight: 900;
       }
 
-      .hero::after {
+      .mobile-panel {
+        position: fixed;
+        inset: 0 0 0 auto;
+        z-index: 950;
+        width: min(86vw, 360px);
+        padding: 28px;
+        background: var(--color-white);
+        box-shadow: -24px 0 60px rgba(0, 96, 100, 0.24);
+        transform: translateX(110%);
+        transition: transform 240ms ease;
+      }
+
+      .mobile-panel.open {
+        transform: translateX(0);
+      }
+
+      .mobile-panel button {
+        display: grid;
+        place-items: center;
+        width: 42px;
+        height: 42px;
+        margin-left: auto;
+        border: 0;
+        border-radius: 50%;
+        background: var(--color-pink-light);
+        color: var(--color-pink);
+        font-size: 1.35rem;
+      }
+
+      .mobile-panel nav {
+        display: grid;
+        gap: 18px;
+        margin-top: 32px;
+        color: var(--color-teal-deep);
+        font-family: var(--font-head);
+        font-size: 1.25rem;
+        font-weight: 800;
+      }
+
+      .hero {
+        min-height: 100vh;
+        padding: calc(var(--nav-h) + 48px) 0 0;
+        overflow: hidden;
+        background: linear-gradient(135deg, var(--color-teal), var(--color-teal-deep));
+        color: var(--color-white);
+      }
+
+      .ecg {
         position: absolute;
-        bottom: -110px;
-        left: -160px;
-        width: 72vw;
-        height: 220px;
-        background: linear-gradient(90deg, rgba(212, 160, 23, 0.98), rgba(212, 160, 23, 0.42));
-        content: "";
-        transform: rotate(-12deg);
-        transform-origin: left center;
+        inset: 16% 0 auto;
+        width: 100%;
+        height: 260px;
+        opacity: 0.15;
+        pointer-events: none;
+      }
+
+      .ecg path {
+        fill: none;
+        stroke: #ffffff;
+        stroke-width: 5;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-dasharray: 1900;
+        stroke-dashoffset: 1900;
+        animation: ecgDraw 4s linear infinite;
+      }
+
+      .particle {
+        position: absolute;
+        width: var(--s);
+        height: var(--s);
+        border-radius: 50%;
+        background: rgba(255, 255, 255, var(--o));
+        left: var(--x);
+        top: var(--y);
+        animation: floatParticle var(--d) ease-in-out infinite alternate;
       }
 
       .hero-grid {
         position: relative;
-        z-index: 1;
+        z-index: 2;
         display: grid;
         align-items: center;
         gap: 42px;
+        padding-bottom: 110px;
       }
 
-      .eyebrow {
+      .hero-copy {
+        max-width: 820px;
+        text-align: center;
+        margin: 0 auto;
+      }
+
+      .hero-badge,
+      .title-badge,
+      .meta-pill,
+      .trust-chip {
         display: inline-flex;
         align-items: center;
-        width: fit-content;
-        margin: 0 0 18px;
-        padding: 8px 14px;
-        border: 1px solid rgba(212, 160, 23, 0.55);
-        border-radius: var(--radius-pill);
-        color: #f5db8b;
-        font-size: 0.84rem;
-        font-weight: 900;
-        letter-spacing: 0;
-        text-transform: uppercase;
+        justify-content: center;
+        gap: 8px;
+        border-radius: var(--pill);
+        font-weight: 800;
+      }
+
+      .hero-badge {
+        min-height: 42px;
+        padding: 0 18px;
+        border: 1px solid rgba(224, 247, 250, 0.78);
+        color: var(--color-white);
       }
 
       .hero h1 {
-        margin: 0;
-        color: var(--color-accent);
-        font-family: var(--font-display);
-        font-size: clamp(4rem, 14vw, 7.2rem);
-        line-height: 0.9;
+        margin: 22px 0 0;
+        font-family: var(--font-head);
+        font-size: clamp(3.4rem, 9vw, 7.2rem);
+        font-weight: 900;
+        line-height: 0.96;
       }
 
-      .hero h2 {
-        margin: 12px 0 0;
-        color: #ffffff;
-        font-family: var(--font-display);
-        font-size: clamp(2.35rem, 8vw, 4.8rem);
-        line-height: 1;
+      .hero h1 span {
+        display: block;
+        margin-top: 14px;
+        color: var(--color-orange);
+        font-size: clamp(2rem, 5vw, 4.2rem);
+        font-style: italic;
+        font-weight: 700;
+      }
+
+      .hero-subtitle {
+        margin: 20px 0 0;
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 1.05rem;
+        letter-spacing: 0.02em;
+      }
+
+      .title-badge {
+        margin-top: 24px;
+        padding: 12px 22px;
+        border: 2px solid rgba(0, 151, 167, 0.45);
+        background: var(--color-teal-light);
+        color: var(--color-teal-deep);
+        font-family: var(--font-head);
+        font-size: clamp(1.25rem, 3vw, 1.75rem);
       }
 
       .tagline {
-        max-width: 760px;
-        margin: 24px 0 0;
-        color: rgba(255, 255, 255, 0.78);
+        margin: 18px 0 0;
+        color: #ffffff;
         font-size: clamp(1.05rem, 2vw, 1.25rem);
+        font-style: italic;
       }
 
-      .meta-pills {
+      .meta-row {
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
         gap: 12px;
-        margin: 28px 0 0;
+        margin-top: 28px;
       }
 
       .meta-pill {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
         min-height: 42px;
         padding: 0 14px;
-        border: 1px solid rgba(255, 255, 255, 0.18);
-        border-radius: var(--radius-pill);
-        background: rgba(255, 255, 255, 0.08);
-        color: rgba(255, 255, 255, 0.92);
-        font-weight: 700;
+        background: rgba(255, 255, 255, 0.14);
+        color: #ffffff;
+        backdrop-filter: blur(12px);
       }
 
       .hero-actions {
         display: flex;
         flex-wrap: wrap;
-        gap: 14px;
+        justify-content: center;
+        gap: 16px;
         margin-top: 32px;
       }
 
-      .hero-poster-wrap {
-        position: relative;
-        justify-self: center;
-        width: min(78vw, 390px);
-        aspect-ratio: 1;
-        border: 9px solid var(--color-accent);
-        border-radius: 50%;
-        box-shadow: 0 32px 70px rgba(0, 0, 0, 0.36);
-        background: #e5e7eb;
-      }
-
-      .hero-poster-wrap::before {
-        position: absolute;
-        inset: -24px;
-        z-index: -1;
-        border: 1px solid rgba(212, 160, 23, 0.32);
-        border-radius: 50%;
-        content: "";
-      }
-
-      .media-slot {
-        position: relative;
-        overflow: hidden;
-        background: #e5e7eb;
-      }
-
-      .media-slot.round {
-        border-radius: 50%;
-      }
-
       .countdown-wrap {
-        position: relative;
-        z-index: 2;
-        margin-top: 42px;
+        margin: 30px auto 0;
+        max-width: 620px;
+      }
+
+      .countdown-title {
+        margin: 0 0 10px;
+        font-size: 0.92rem;
+        font-weight: 800;
       }
 
       .countdown {
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 12px;
-        max-width: 700px;
+        gap: 10px;
       }
 
       .count-box {
-        min-height: 104px;
-        padding: 16px;
-        border: 1px solid rgba(212, 160, 23, 0.42);
-        border-radius: var(--radius);
-        background: rgba(13, 31, 51, 0.64);
-        text-align: center;
+        padding: 14px;
+        border-radius: 14px;
+        background: rgba(0, 96, 100, 0.88);
       }
 
       .count-box strong {
         display: block;
-        color: var(--color-accent);
-        font-size: clamp(2rem, 8vw, 3.2rem);
+        color: #ffffff;
+        font-family: var(--font-head);
+        font-size: 2.25rem;
         line-height: 1;
       }
 
       .count-box span {
-        color: rgba(255, 255, 255, 0.78);
-        font-size: 0.78rem;
+        color: var(--color-pink-light);
+        font-size: 0.72rem;
         font-weight: 900;
         text-transform: uppercase;
       }
 
-      .why-grid,
-      .paths-grid {
+      .poster-frame {
+        justify-self: center;
+        width: min(78vw, 340px);
+        aspect-ratio: 1;
+        border: 8px solid transparent;
+        border-radius: 50%;
+        background: linear-gradient(#fff, #fff) padding-box, linear-gradient(135deg, var(--color-orange), #ffd166) border-box;
+        box-shadow: var(--shadow-strong);
+        animation: floatPoster 4s ease-in-out infinite;
+      }
+
+      .wave {
+        position: absolute;
+        right: 0;
+        bottom: -1px;
+        left: 0;
+        width: 100%;
+        height: 82px;
+        color: var(--color-bg);
+      }
+
+      .wave svg {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+
+      .org-strip {
+        background: var(--color-white);
+      }
+
+      .org-card {
+        max-width: 760px;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .org-logo {
+        width: 94px;
+        height: 94px;
+        margin: 0 auto 18px;
+        border-radius: 24px;
+      }
+
+      .org-card h2 {
+        margin: 0;
+        color: var(--color-teal-dark);
+        font-family: var(--font-head);
+        font-size: clamp(2rem, 5vw, 3rem);
+      }
+
+      .org-card .subline {
+        margin: 4px 0 14px;
+        color: var(--color-pink);
+        font-family: var(--font-head);
+        font-weight: 800;
+      }
+
+      .trust-row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 24px;
+      }
+
+      .trust-chip {
+        min-height: 40px;
+        padding: 0 14px;
+        background: var(--color-teal-light);
+        color: var(--color-teal-deep);
+      }
+
+      .why {
+        background: var(--color-teal-light);
+      }
+
+      .grid {
         display: grid;
-        gap: 18px;
+        gap: 20px;
       }
 
       .info-card,
-      .path-card,
       .speaker-card,
+      .path-slide,
       .pricing-card,
       .form-card,
       .faq-item,
       .testimonial-card {
-        border-radius: var(--radius);
         background: var(--color-surface);
-        box-shadow: var(--shadow-card);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
       }
 
       .info-card {
-        padding: 26px;
-        border: 1px solid rgba(26, 58, 92, 0.08);
+        padding: 28px;
+        border-top: 4px solid var(--color-teal);
+        transition: transform 180ms ease, box-shadow 180ms ease;
       }
 
-      .info-icon {
-        display: block;
-        margin-bottom: 14px;
-        font-size: 2rem;
+      .info-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 24px 54px rgba(0, 151, 167, 0.2);
+      }
+
+      .info-card .icon {
+        font-size: 2.4rem;
       }
 
       .info-card h3,
-      .path-card h3 {
-        margin: 0;
-        color: var(--color-primary);
-        font-size: 1.12rem;
+      .path-slide h3 {
+        margin: 14px 0 8px;
+        color: var(--color-teal-deep);
+        font-family: var(--font-head);
       }
 
       .info-card p,
-      .path-card p {
-        margin: 8px 0 0;
+      .path-slide p {
+        margin: 0;
         color: var(--color-muted);
       }
 
-      .speakers-grid {
+      .speakers {
+        background: #ffffff;
+      }
+
+      .speaker-grid {
         display: grid;
-        gap: 24px;
+        gap: 22px;
       }
 
       .speaker-card {
-        padding: 32px;
-        text-align: center;
+        display: grid;
+        gap: 22px;
+        align-items: center;
+        padding: 28px;
+        border: 1px solid rgba(0, 151, 167, 0.24);
       }
 
       .speaker-photo {
         width: 160px;
         height: 160px;
-        margin: 0 auto 22px;
-        border: 6px solid var(--color-accent);
-        box-shadow: 0 16px 34px rgba(26, 58, 92, 0.18);
+        margin: 0 auto;
+        border: 6px solid var(--color-pink);
+        border-radius: 50%;
+        transition: transform 180ms ease;
+      }
+
+      .speaker-card:hover .speaker-photo {
+        transform: scale(1.04);
       }
 
       .speaker-card h3 {
         margin: 0;
-        color: var(--color-primary);
-        font-family: var(--font-display);
-        font-size: 2rem;
+        color: var(--color-teal-deep);
+        font-family: var(--font-head);
+        font-size: 1.8rem;
       }
 
       .badge {
         display: inline-flex;
-        align-items: center;
-        min-height: 30px;
-        margin-top: 12px;
-        padding: 0 12px;
-        border-radius: var(--radius-pill);
-        background: rgba(212, 160, 23, 0.14);
-        color: var(--color-primary);
-        font-size: 0.82rem;
-        font-weight: 900;
+        width: fit-content;
+        margin: 10px 0;
+        padding: 7px 12px;
+        border-radius: var(--pill);
+        background: var(--color-teal);
+        color: #ffffff;
+        font-size: 0.84rem;
+        font-weight: 800;
       }
 
-      .muted-line {
-        margin: 12px 0 0;
+      .muted {
         color: var(--color-muted);
-        font-weight: 700;
-      }
-
-      .speaker-card p:not(.muted-line) {
-        margin: 18px 0 0;
-        color: #374151;
       }
 
       .social-link {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
+        display: inline-grid;
+        place-items: center;
         width: 42px;
         height: 42px;
-        margin-top: 18px;
+        margin-top: 10px;
         border-radius: 50%;
-        background: var(--color-primary);
+        background: var(--color-pink);
         color: #ffffff;
         font-weight: 900;
       }
 
-      .path-card {
+      .paths {
+        overflow: hidden;
+        background: var(--color-teal-deep);
+        color: #ffffff;
+      }
+
+      .paths .section-heading h2,
+      .paths .section-heading p,
+      .testimonials .section-heading h2 {
+        color: #ffffff;
+      }
+
+      .paths .section-heading p {
+        opacity: 0.8;
+      }
+
+      .carousel-shell {
         position: relative;
-        min-height: 172px;
-        padding: 26px 22px 24px;
-        border-left: 4px solid transparent;
-        transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+        overflow: hidden;
       }
 
-      .path-card:hover {
-        border-left-color: var(--color-accent);
-        box-shadow: var(--shadow-soft);
-        transform: translateY(-6px);
+      .path-track {
+        display: flex;
+        transition: transform 520ms ease;
       }
 
-      .path-number {
+      .path-slide-wrap {
+        flex: 0 0 100%;
+        padding: 0 10px;
+      }
+
+      .path-slide {
+        min-height: 260px;
+        padding: 32px;
+      }
+
+      .path-num {
         display: grid;
         place-items: center;
-        width: 38px;
-        height: 38px;
-        margin-bottom: 18px;
+        width: 58px;
+        height: 58px;
         border-radius: 50%;
-        background: var(--color-accent);
-        color: var(--color-primary);
+        background: var(--color-pink);
+        color: #ffffff;
+        font-family: var(--font-head);
+        font-size: 1.45rem;
         font-weight: 900;
       }
 
+      .path-slide h3 {
+        font-size: 1.35rem;
+      }
+
+      .path-slide p {
+        color: var(--color-text);
+        font-style: italic;
+      }
+
+      .carousel-btn {
+        position: absolute;
+        top: 50%;
+        z-index: 2;
+        display: none;
+        place-items: center;
+        width: 46px;
+        height: 46px;
+        border: 0;
+        border-radius: 50%;
+        background: var(--color-teal);
+        color: #ffffff;
+        font-size: 1.5rem;
+        transform: translateY(-50%);
+      }
+
+      .carousel-btn.prev {
+        left: 4px;
+      }
+
+      .carousel-btn.next {
+        right: 4px;
+      }
+
+      .dots {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        margin-top: 24px;
+      }
+
+      .dot {
+        width: 10px;
+        height: 10px;
+        border: 0;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.58);
+      }
+
+      .dot.active {
+        background: var(--color-pink);
+      }
+
       .agenda {
-        background: #ffffff;
+        background: var(--color-bg);
       }
 
       .tabs {
@@ -559,50 +833,72 @@
         flex-wrap: wrap;
         justify-content: center;
         gap: 12px;
-        margin-bottom: 36px;
       }
 
       .tab-btn {
-        min-height: 48px;
+        min-height: 46px;
         padding: 0 16px;
-        border: 0;
-        border-bottom: 3px solid transparent;
-        background: transparent;
-        color: var(--color-primary);
-        cursor: pointer;
+        border: 2px solid var(--color-teal);
+        border-radius: var(--pill);
+        background: #ffffff;
+        color: var(--color-teal-deep);
         font-weight: 900;
       }
 
       .tab-btn.active {
-        border-bottom-color: var(--color-accent);
-        color: var(--color-cta);
+        border-color: var(--color-pink);
+        background: var(--color-pink);
+        color: #ffffff;
+      }
+
+      .recording-note {
+        width: fit-content;
+        max-width: 100%;
+        margin: 22px auto 32px;
+        padding: 12px 18px;
+        border-radius: var(--pill);
+        background: var(--color-pink-light);
+        color: var(--color-pink);
+        font-weight: 900;
+        text-align: center;
       }
 
       .timeline {
         display: none;
-        max-width: 850px;
+        max-width: 860px;
         margin: 0 auto;
+        opacity: 0;
+        transition: opacity 240ms ease;
       }
 
       .timeline.active {
         display: block;
+        opacity: 1;
+      }
+
+      .timeline-note {
+        margin: 0 0 20px;
+        color: var(--color-teal-deep);
+        font-family: var(--font-head);
+        font-weight: 800;
+        text-align: center;
       }
 
       .timeline-item {
         position: relative;
         display: grid;
-        grid-template-columns: 120px 1fr;
+        grid-template-columns: 116px 1fr;
         gap: 24px;
-        padding: 0 0 28px;
+        padding-bottom: 28px;
       }
 
       .timeline-item::before {
         position: absolute;
-        top: 12px;
-        bottom: -12px;
-        left: 134px;
+        top: 13px;
+        bottom: -8px;
+        left: 129px;
         width: 2px;
-        background: rgba(212, 160, 23, 0.36);
+        background: var(--color-teal);
         content: "";
       }
 
@@ -611,8 +907,7 @@
       }
 
       .timeline-time {
-        color: var(--color-primary);
-        font-size: 0.92rem;
+        color: var(--color-teal-deep);
         font-weight: 900;
         text-align: right;
       }
@@ -620,80 +915,101 @@
       .timeline-content {
         position: relative;
         padding-left: 26px;
-        color: #374151;
+        color: var(--color-text);
         font-weight: 700;
       }
 
       .timeline-content::before {
         position: absolute;
         top: 7px;
-        left: -1px;
+        left: 0;
         width: 14px;
         height: 14px;
-        border: 3px solid #ffffff;
         border-radius: 50%;
-        background: var(--color-accent);
-        box-shadow: 0 0 0 2px rgba(212, 160, 23, 0.3);
+        background: var(--color-pink);
+        box-shadow: 0 0 0 5px rgba(233, 30, 140, 0.14);
         content: "";
+      }
+
+      .pricing {
+        background: #ffffff;
       }
 
       .pricing-grid {
         display: grid;
-        max-width: 900px;
+        max-width: 940px;
         margin: 0 auto;
-        gap: 22px;
+        gap: 24px;
       }
 
       .pricing-card {
         position: relative;
-        padding: 32px;
-        border: 1px solid rgba(26, 58, 92, 0.08);
+        overflow: hidden;
       }
 
-      .pricing-card.featured {
-        border: 2px solid var(--color-accent);
-        transform: none;
+      .price-head {
+        padding: 30px;
+        color: #ffffff;
       }
 
-      .price-chip {
-        display: inline-flex;
-        margin-bottom: 18px;
-        padding: 6px 12px;
-        border-radius: var(--radius-pill);
-        background: rgba(26, 58, 92, 0.08);
-        color: var(--color-primary);
+      .viewer .price-head {
+        background: linear-gradient(135deg, var(--color-teal), var(--color-teal-deep));
+      }
+
+      .interactive {
+        box-shadow: 0 0 0 2px rgba(233, 30, 140, 0.16), 0 24px 70px rgba(233, 30, 140, 0.24);
+      }
+
+      .interactive .price-head {
+        background: linear-gradient(135deg, var(--color-pink), #ff5ab3);
+      }
+
+      .popular {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        padding: 6px 10px;
+        border-radius: var(--pill);
+        background: var(--color-orange);
+        color: #ffffff;
         font-size: 0.78rem;
         font-weight: 900;
       }
 
-      .featured .price-chip {
-        background: var(--color-accent);
-      }
-
-      .pricing-card h3 {
-        margin: 0;
-        color: var(--color-primary);
-        font-family: var(--font-display);
-        font-size: 2rem;
-      }
-
       .price {
-        margin: 8px 0 20px;
-        color: var(--color-cta);
-        font-size: 2.6rem;
+        margin: 4px 0 0;
+        font-family: var(--font-head);
+        font-size: 3rem;
         font-weight: 900;
+        line-height: 1;
+      }
+
+      .price-name {
+        font-size: 1.2rem;
+        font-weight: 900;
+      }
+
+      .chip {
+        display: inline-flex;
+        margin-top: 14px;
+        padding: 6px 12px;
+        border-radius: var(--pill);
+        background: var(--color-orange);
+        color: #ffffff;
+        font-weight: 900;
+        font-size: 0.8rem;
       }
 
       .features {
         display: grid;
         gap: 10px;
-        margin: 0 0 28px;
-        padding: 0;
+        margin: 0;
+        padding: 26px 30px 30px;
         list-style: none;
       }
 
       .features li {
-        color: #374151;
+        color: var(--color-text);
         font-weight: 700;
       }
 
@@ -701,17 +1017,19 @@
         color: var(--color-muted);
       }
 
+      .price-action {
+        padding: 0 30px 30px;
+      }
+
       .registration {
-        background:
-          linear-gradient(rgba(249, 247, 244, 0.93), rgba(249, 247, 244, 0.93)),
-          radial-gradient(circle at 15% 20%, rgba(212, 160, 23, 0.28), transparent 25%);
+        background: var(--color-teal-light);
       }
 
       .form-card {
-        max-width: 820px;
+        max-width: 680px;
         margin: 0 auto;
-        padding: 26px;
-        border-left: 7px solid var(--color-primary);
+        padding: 30px;
+        border-left: 6px solid var(--color-teal);
       }
 
       .form-grid {
@@ -721,35 +1039,44 @@
 
       .field {
         display: grid;
-        gap: 8px;
+        gap: 7px;
       }
 
       .field label,
       .radio-group legend {
-        color: var(--color-primary);
+        color: var(--color-teal-deep);
         font-weight: 900;
       }
 
       .field input,
       .field select {
         width: 100%;
-        min-height: 48px;
-        border: 1px solid #d1d5db;
-        border-radius: var(--radius);
+        min-height: 50px;
+        border: 1px solid rgba(0, 151, 167, 0.24);
+        border-radius: 12px;
         background: #ffffff;
-        color: var(--color-text);
         padding: 0 14px;
+        color: var(--color-text);
       }
 
       .phone-row {
         display: grid;
-        grid-template-columns: 94px 1fr;
+        grid-template-columns: 74px 1fr;
         gap: 10px;
+      }
+
+      .prefix {
+        display: grid;
+        place-items: center;
+        border-radius: 12px;
+        background: var(--color-teal);
+        color: #ffffff;
+        font-weight: 900;
       }
 
       .radio-group {
         display: grid;
-        gap: 12px;
+        gap: 10px;
         margin: 0;
         padding: 0;
         border: 0;
@@ -760,34 +1087,34 @@
         gap: 10px;
       }
 
-      .radio-option {
+      .radio-card {
         display: flex;
         align-items: center;
+        min-height: 56px;
         gap: 10px;
-        min-height: 50px;
         padding: 12px;
-        border: 1px solid #d1d5db;
-        border-radius: var(--radius);
-        cursor: pointer;
-        font-weight: 800;
+        border: 2px solid rgba(0, 151, 167, 0.2);
+        border-radius: 14px;
+        background: #ffffff;
+        font-weight: 900;
       }
 
-      .radio-option:has(input:checked) {
-        border-color: var(--color-accent);
-        background: rgba(212, 160, 23, 0.12);
-      }
-
-      .field.error input,
-      .field.error select,
-      .radio-group.error .radio-option {
-        border-color: var(--color-cta);
+      .radio-card:has(input:checked) {
+        border-color: var(--color-pink);
+        background: var(--color-pink-light);
+        color: var(--color-pink);
       }
 
       .error-message {
         display: none;
-        color: var(--color-cta);
+        color: #d32f2f;
         font-size: 0.84rem;
         font-weight: 800;
+      }
+
+      .field.error input,
+      .radio-group.error .radio-card {
+        border-color: #d32f2f;
       }
 
       .field.error .error-message,
@@ -795,25 +1122,34 @@
         display: block;
       }
 
-      .form-note {
+      .contact-note {
         margin: 22px 0 0;
         color: var(--color-muted);
         text-align: center;
+        font-weight: 700;
+      }
+
+      .faq {
+        background: #ffffff;
       }
 
       .faq-list {
         display: grid;
-        max-width: 920px;
+        max-width: 900px;
         margin: 0 auto;
         gap: 12px;
       }
 
       .faq-item {
         overflow: hidden;
-        border: 1px solid rgba(26, 58, 92, 0.08);
+        border-left: 5px solid var(--color-teal);
       }
 
-      .faq-question {
+      .faq-item.open {
+        background: var(--color-teal-light);
+      }
+
+      .faq-q {
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -821,49 +1157,53 @@
         min-height: 64px;
         padding: 0 22px;
         border: 0;
-        background: #ffffff;
-        color: var(--color-primary);
-        cursor: pointer;
+        background: transparent;
+        color: var(--color-teal-deep);
         font-weight: 900;
         text-align: left;
       }
 
-      .faq-question span:last-child {
-        color: var(--color-accent);
-        font-size: 1.5rem;
-        line-height: 1;
+      .faq-q .arrow {
+        color: var(--color-teal-dark);
+        transition: transform 180ms ease;
       }
 
-      .faq-answer {
+      .faq-item.open .arrow {
+        transform: rotate(180deg);
+      }
+
+      .faq-a {
         max-height: 0;
         overflow: hidden;
         transition: max-height 240ms ease;
       }
 
-      .faq-answer p {
+      .faq-a p {
         margin: 0;
         padding: 0 22px 22px;
         color: var(--color-muted);
       }
 
       .testimonials {
-        background: #ffffff;
+        overflow: hidden;
+        background: var(--color-teal-deep);
+      }
+
+      .testimonial-window {
+        overflow: hidden;
       }
 
       .testimonial-track {
-        display: grid;
-        grid-auto-columns: minmax(280px, 1fr);
-        grid-auto-flow: column;
+        display: flex;
         gap: 18px;
-        overflow-x: auto;
-        padding: 8px 4px 24px;
-        scroll-snap-type: x mandatory;
+        transition: transform 540ms ease;
+        touch-action: pan-y;
       }
 
       .testimonial-card {
-        min-width: 280px;
-        padding: 24px;
-        scroll-snap-align: start;
+        flex: 0 0 100%;
+        padding: 26px;
+        border-top: 5px solid var(--color-pink);
       }
 
       .avatar {
@@ -871,61 +1211,30 @@
         place-items: center;
         width: 58px;
         height: 58px;
-        margin-bottom: 16px;
         border-radius: 50%;
-        background: var(--color-primary);
-        color: var(--color-accent);
+        background: var(--color-teal-dark);
+        color: #ffffff;
         font-weight: 900;
       }
 
       .testimonial-card h3 {
-        margin: 0;
-        color: var(--color-primary);
+        margin: 16px 0 2px;
+        color: var(--color-teal-deep);
       }
 
       .testimonial-card p {
-        margin: 10px 0 0;
-        color: #374151;
+        margin: 0;
+        color: var(--color-muted);
       }
 
       .testimonial-card blockquote {
-        margin: 16px 0 0;
-        color: var(--color-muted);
+        margin: 18px 0 0;
+        color: var(--color-text);
         font-style: italic;
       }
 
-      .partners {
-        display: none;
-        padding: 38px 0;
-        background: rgba(26, 58, 92, 0.05);
-      }
-
-      .partners.visible {
-        display: block;
-      }
-
-      .partner-row {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
-        gap: 18px;
-      }
-
-      .partner-row strong {
-        color: var(--color-primary);
-      }
-
-      .partner-logo {
-        width: 180px;
-        height: 72px;
-        border: 1px dashed #cbd5e1;
-        border-radius: var(--radius);
-        background: #e5e7eb;
-      }
-
       .footer {
-        background: var(--color-footer);
+        background: #003d47;
         color: #ffffff;
       }
 
@@ -937,9 +1246,8 @@
 
       .footer h3 {
         margin: 0 0 14px;
-        color: var(--color-accent);
-        font-family: var(--font-display);
-        font-size: 1.45rem;
+        color: var(--color-teal);
+        font-family: var(--font-head);
       }
 
       .footer p,
@@ -947,9 +1255,7 @@
         color: rgba(255, 255, 255, 0.78);
       }
 
-      .footer-links,
-      .contact-list,
-      .socials {
+      .footer ul {
         display: grid;
         gap: 10px;
         margin: 0;
@@ -957,9 +1263,17 @@
         list-style: none;
       }
 
+      .footer a:hover {
+        color: #ffffff;
+        text-decoration: underline;
+        text-decoration-color: var(--color-teal);
+        text-underline-offset: 5px;
+      }
+
       .socials {
         display: flex;
         flex-wrap: wrap;
+        gap: 10px;
         margin-top: 16px;
       }
 
@@ -969,49 +1283,88 @@
         min-width: 42px;
         height: 42px;
         padding: 0 10px;
-        border: 1px solid rgba(255, 255, 255, 0.18);
-        border-radius: var(--radius-pill);
+        border: 1px solid rgba(0, 188, 212, 0.36);
+        border-radius: var(--pill);
         font-weight: 900;
       }
 
       .footer-bottom {
         padding: 18px 0;
-        border-top: 1px solid rgba(255, 255, 255, 0.12);
-        color: rgba(255, 255, 255, 0.64);
+        border-top: 1px solid rgba(0, 188, 212, 0.5);
+        color: rgba(255, 255, 255, 0.65);
+        font-size: 0.78rem;
         text-align: center;
       }
 
-      .whatsapp-float {
+      .float-whatsapp,
+      .to-top {
         position: fixed;
-        right: 18px;
-        bottom: 18px;
-        z-index: 60;
+        z-index: 999;
         display: grid;
         place-items: center;
-        width: 60px;
-        height: 60px;
+        width: 56px;
+        height: 56px;
         border-radius: 50%;
-        background: #25d366;
         color: #ffffff;
-        box-shadow: 0 12px 28px rgba(18, 140, 74, 0.36);
-        font-size: 1.9rem;
-        animation: pulse 1.9s infinite;
+        box-shadow: var(--shadow);
+      }
+
+      .float-whatsapp {
+        right: 18px;
+        bottom: 18px;
+        background: #25d366;
+        animation: whatsappPulse 2s infinite;
+      }
+
+      .float-whatsapp .tip {
+        position: absolute;
+        right: 64px;
+        width: max-content;
+        padding: 7px 10px;
+        border-radius: 8px;
+        background: var(--color-text);
+        color: #ffffff;
+        font-size: 0.78rem;
+        opacity: 0;
+        pointer-events: none;
+        transform: translateX(6px);
+        transition: opacity 160ms ease, transform 160ms ease;
+      }
+
+      .float-whatsapp:hover .tip {
+        opacity: 1;
+        transform: translateX(0);
+      }
+
+      .to-top {
+        left: 18px;
+        bottom: 18px;
+        border: 0;
+        background: var(--color-teal-dark);
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(12px);
+        transition: opacity 180ms ease, transform 180ms ease;
+      }
+
+      .to-top.visible {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(0);
       }
 
       .mobile-register-bar {
         position: fixed;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        z-index: 55;
+        inset: auto 0 0;
+        z-index: 940;
         display: none;
         min-height: 54px;
         align-items: center;
         justify-content: center;
-        background: var(--color-cta);
+        background: var(--color-pink);
         color: #ffffff;
+        font-family: var(--font-head);
         font-weight: 900;
-        box-shadow: 0 -10px 24px rgba(13, 31, 51, 0.18);
         transform: translateY(110%);
         transition: transform 180ms ease;
       }
@@ -1023,11 +1376,11 @@
       .modal {
         position: fixed;
         inset: 0;
-        z-index: 80;
+        z-index: 1000;
         display: none;
         place-items: center;
         padding: 20px;
-        background: rgba(13, 31, 51, 0.72);
+        background: rgba(0, 61, 71, 0.78);
       }
 
       .modal.show {
@@ -1036,22 +1389,18 @@
 
       .modal-card {
         width: min(100%, 520px);
-        padding: 32px;
+        padding: 34px;
         border-radius: var(--radius);
-        background: #ffffff;
-        box-shadow: var(--shadow-soft);
+        background: linear-gradient(135deg, var(--color-teal-dark), var(--color-teal-deep));
+        color: #ffffff;
         text-align: center;
+        box-shadow: var(--shadow-strong);
       }
 
       .modal-card h2 {
         margin: 0;
-        color: var(--color-primary);
-        font-family: var(--font-display);
+        font-family: var(--font-head);
         font-size: 2.4rem;
-      }
-
-      .modal-card p {
-        color: var(--color-muted);
       }
 
       .modal-actions {
@@ -1059,18 +1408,67 @@
         flex-wrap: wrap;
         justify-content: center;
         gap: 12px;
-        margin-top: 22px;
+        margin-top: 24px;
       }
 
-      @keyframes pulse {
-        0% {
-          box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.46), 0 12px 28px rgba(18, 140, 74, 0.36);
+      .reveal {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 620ms ease, transform 620ms ease;
+        transition-delay: var(--delay, 0ms);
+      }
+
+      .reveal.in-view {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      @keyframes ring {
+        from {
+          opacity: 0.42;
+          transform: scale(1);
         }
-        70% {
-          box-shadow: 0 0 0 16px rgba(37, 211, 102, 0), 0 12px 28px rgba(18, 140, 74, 0.36);
+        to {
+          opacity: 0;
+          transform: scale(2);
         }
-        100% {
-          box-shadow: 0 0 0 0 rgba(37, 211, 102, 0), 0 12px 28px rgba(18, 140, 74, 0.36);
+      }
+
+      @keyframes clickBurst {
+        to {
+          width: 170px;
+          height: 170px;
+          opacity: 0;
+        }
+      }
+
+      @keyframes ecgDraw {
+        to {
+          stroke-dashoffset: -1900;
+        }
+      }
+
+      @keyframes floatParticle {
+        to {
+          transform: translate(24px, -34px);
+        }
+      }
+
+      @keyframes floatPoster {
+        0%, 100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-16px);
+        }
+      }
+
+      @keyframes whatsappPulse {
+        0%, 100% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.15);
         }
       }
 
@@ -1083,6 +1481,11 @@
           scroll-behavior: auto !important;
           transition-duration: 0.01ms !important;
         }
+
+        .reveal {
+          opacity: 1;
+          transform: none;
+        }
       }
 
       @media (min-width: 640px) {
@@ -1090,11 +1493,7 @@
           grid-template-columns: repeat(4, minmax(0, 1fr));
         }
 
-        .why-grid {
-          grid-template-columns: repeat(2, minmax(0, 1fr));
-        }
-
-        .paths-grid {
+        .grid {
           grid-template-columns: repeat(2, minmax(0, 1fr));
         }
 
@@ -1107,78 +1506,89 @@
         .submit-row {
           grid-column: 1 / -1;
         }
+
+        .radio-options {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
       }
 
       @media (min-width: 860px) {
+        .menu-toggle {
+          display: none;
+        }
+
         .nav-links,
         .nav-cta {
           display: inline-flex;
         }
 
         .hero-grid {
-          grid-template-columns: minmax(0, 3fr) minmax(280px, 2fr);
+          grid-template-columns: minmax(0, 1fr) 360px;
         }
 
-        .why-grid {
+        .hero-copy {
+          text-align: center;
+        }
+
+        .grid {
           grid-template-columns: repeat(3, minmax(0, 1fr));
         }
 
-        .speakers-grid,
-        .pricing-grid,
-        .footer-grid {
+        .speaker-grid,
+        .pricing-grid {
           grid-template-columns: repeat(2, minmax(0, 1fr));
         }
 
-        .paths-grid {
-          grid-template-columns: repeat(3, minmax(0, 1fr));
+        .speaker-card {
+          grid-template-columns: 170px 1fr;
+          text-align: left;
         }
 
-        .pricing-card.featured {
-          transform: scale(1.035);
+        .path-slide-wrap {
+          flex-basis: 33.333%;
         }
-      }
 
-      @media (min-width: 1100px) {
-        .paths-grid {
-          grid-template-columns: repeat(4, minmax(0, 1fr));
+        .carousel-btn {
+          display: grid;
+        }
+
+        .testimonial-card {
+          flex-basis: calc((100% - 36px) / 3);
         }
 
         .footer-grid {
-          grid-template-columns: 1.35fr 0.8fr 1fr;
+          grid-template-columns: 1.15fr 0.8fr 1fr;
         }
       }
 
       @media (max-width: 859px) {
-        .site-header {
-          min-height: 66px;
-        }
-
-        .brand span {
-          font-size: 0.92rem;
-        }
-
         .hero {
           padding-top: 100px;
+        }
+
+        .poster-frame {
+          display: none;
         }
 
         .mobile-register-bar {
           display: flex;
         }
 
-        .whatsapp-float {
+        .float-whatsapp {
           bottom: 72px;
         }
       }
 
       @media (max-width: 560px) {
         .hero-actions .btn,
-        .pricing-card .btn {
+        .price-action .btn,
+        .submit-row .btn {
           width: 100%;
         }
 
         .timeline-item {
           grid-template-columns: 1fr;
-          gap: 8px;
+          gap: 6px;
           padding-left: 20px;
         }
 
@@ -1190,29 +1600,20 @@
           text-align: left;
         }
 
-        .timeline-content {
-          padding-left: 22px;
-        }
-
         .timeline-content::before {
-          left: -21px;
-        }
-
-        .phone-row {
-          grid-template-columns: 84px 1fr;
+          left: -20px;
         }
       }
     </style>
   </head>
   <body>
-    <header class="site-header" id="siteHeader">
+    <header class="site-header" id="header">
       <nav class="nav container" aria-label="Primary navigation">
         <a class="brand" href="#home" aria-label="IMA Parippally home">
           <span class="logo-slot image-check">
-            <img src="images/ima-logo.png" alt="IMA Parippally official logo, 96 by 96 pixels" />
-            <span class="image-fallback">IMA</span>
+            <img src="images/ima-logo.png" alt="IMA Parippally official logo, recommended 300 by 300 pixels" />
+            <span class="image-fallback logo-text"><strong>Indian Medical Association</strong><span>Parippally Branch</span></span>
           </span>
-          <span>IMA Parippally</span>
         </a>
         <div class="nav-links">
           <a href="#home">Home</a>
@@ -1221,297 +1622,268 @@
           <a href="#agenda">Agenda</a>
           <a href="#register">Register</a>
         </div>
-        <a class="btn btn-cta nav-cta" href="#register">Register Now</a>
+        <a class="btn btn-pink ripple nav-cta" href="#register">Register Now</a>
+        <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open menu">☰</button>
       </nav>
     </header>
 
+    <aside class="mobile-panel" id="mobilePanel" aria-label="Mobile navigation">
+      <button id="menuClose" type="button" aria-label="Close menu">×</button>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#speakers">Speakers</a>
+        <a href="#career-paths">Career Paths</a>
+        <a href="#agenda">Agenda</a>
+        <a href="#register">Register</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+    </aside>
+
     <main>
       <section class="hero" id="home">
+        <svg class="ecg" viewBox="0 0 1440 260" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M0 145 H120 L145 145 L165 105 L188 190 L222 70 L250 145 H390 L420 145 L445 118 L470 178 L505 92 L536 145 H700 L725 145 L750 112 L778 188 L812 68 L846 145 H1010 L1038 145 L1065 116 L1094 180 L1128 86 L1164 145 H1440" />
+        </svg>
+        <span class="particle" style="--x:6%;--y:18%;--s:4px;--o:.22;--d:5s"></span>
+        <span class="particle" style="--x:18%;--y:70%;--s:6px;--o:.14;--d:7s"></span>
+        <span class="particle" style="--x:27%;--y:24%;--s:3px;--o:.28;--d:6s"></span>
+        <span class="particle" style="--x:39%;--y:82%;--s:5px;--o:.2;--d:8s"></span>
+        <span class="particle" style="--x:51%;--y:16%;--s:4px;--o:.24;--d:6.5s"></span>
+        <span class="particle" style="--x:63%;--y:66%;--s:6px;--o:.15;--d:7.5s"></span>
+        <span class="particle" style="--x:72%;--y:29%;--s:3px;--o:.22;--d:5.5s"></span>
+        <span class="particle" style="--x:87%;--y:75%;--s:5px;--o:.18;--d:8.5s"></span>
+        <span class="particle" style="--x:93%;--y:20%;--s:4px;--o:.3;--d:6s"></span>
+        <span class="particle" style="--x:12%;--y:45%;--s:5px;--o:.16;--d:7s"></span>
+        <span class="particle" style="--x:31%;--y:54%;--s:4px;--o:.12;--d:6s"></span>
+        <span class="particle" style="--x:44%;--y:35%;--s:6px;--o:.18;--d:8s"></span>
+        <span class="particle" style="--x:57%;--y:86%;--s:3px;--o:.25;--d:5s"></span>
+        <span class="particle" style="--x:69%;--y:10%;--s:5px;--o:.15;--d:7s"></span>
+        <span class="particle" style="--x:82%;--y:48%;--s:4px;--o:.24;--d:6s"></span>
+        <span class="particle" style="--x:96%;--y:58%;--s:6px;--o:.12;--d:8s"></span>
+        <span class="particle" style="--x:4%;--y:88%;--s:3px;--o:.2;--d:6.8s"></span>
+        <span class="particle" style="--x:24%;--y:9%;--s:5px;--o:.13;--d:7.2s"></span>
+        <span class="particle" style="--x:75%;--y:88%;--s:4px;--o:.22;--d:5.8s"></span>
+        <span class="particle" style="--x:89%;--y:37%;--s:3px;--o:.3;--d:6.2s"></span>
+
         <div class="container hero-grid">
-          <div>
-            <p class="eyebrow">IMA Parippally Presents · Online Conclave 2025</p>
-            <h1>After MBBS?</h1>
-            <h2>Exploring Hidden Treasures</h2>
+          <div class="hero-copy reveal">
+            <div class="hero-badge">🏥 Indian Medical Association · Parippally Branch · Kerala State</div>
+            <h1>After MBBS?<span>Don't Be an Ordinary Doctor.</span></h1>
+            <p class="hero-subtitle">Indian Medical Association, Parippally Branch of Kerala State Presents</p>
+            <div class="title-badge">🌐 Online Conclave 2026</div>
             <p class="tagline">Exploring Global and Emerging Career Opportunities</p>
-            <div class="meta-pills" aria-label="Event details">
-              <span class="meta-pill">📅 September 11, 12 &amp; 13</span>
-              <span class="meta-pill">🕕 6:00 PM - 9:00 PM IST</span>
+            <div class="meta-row">
+              <span class="meta-pill">📅 September 11, 12 &amp; 13 - 2026</span>
+              <span class="meta-pill">🕕 Evening 6:00 PM - 9:00 PM IST</span>
               <span class="meta-pill">💻 Live on Zoom</span>
-              <span class="meta-pill">⏱ 3 Hours/Day</span>
+              <span class="meta-pill">🎬 Recorded Sessions Available</span>
             </div>
             <div class="hero-actions">
-              <a class="btn btn-cta" href="#register">Register Now - ₹249 onwards</a>
-              <a class="btn btn-outline" href="https://wa.me/917736303032" target="_blank" rel="noopener">WhatsApp Us</a>
+              <a class="btn btn-pink ripple" href="#register">Register Now</a>
+              <a class="btn btn-white" href="https://wa.me/917736303032" target="_blank" rel="noopener">
+                <svg width="20" height="20" viewBox="0 0 32 32" aria-hidden="true"><path fill="#0097A7" d="M16 3C8.8 3 3 8.8 3 16c0 2.3.6 4.5 1.7 6.4L3.5 29l6.8-1.8c1.8 1 3.8 1.5 5.9 1.5 7.2 0 13-5.8 13-13S23.2 3 16 3Zm0 23.4c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-4 1.1 1.1-3.9-.3-.4c-1.1-1.7-1.7-3.6-1.7-5.6 0-5.8 4.7-10.6 10.6-10.6S26.6 10 26.6 15.9 21.8 26.4 16 26.4Zm5.8-7.9c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.5-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.2-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1.1 2.8 1.2 3c.2.2 2.1 3.2 5 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.9-.8 2.1-1.5.3-.8.3-1.4.2-1.5 0-.2-.2-.3-.5-.4Z"/></svg>
+                WhatsApp Us
+              </a>
+            </div>
+            <div class="countdown-wrap" id="countdownWrap">
+              <p class="countdown-title">Conclave begins in:</p>
+              <div class="countdown">
+                <div class="count-box"><strong id="days">00</strong><span>Days</span></div>
+                <div class="count-box"><strong id="hours">00</strong><span>Hours</span></div>
+                <div class="count-box"><strong id="minutes">00</strong><span>Minutes</span></div>
+                <div class="count-box"><strong id="seconds">00</strong><span>Seconds</span></div>
+              </div>
             </div>
           </div>
-          <div class="hero-poster-wrap media-slot round image-check">
-            <img src="images/event-poster.jpg" alt="After MBBS webinar event poster, circular display, recommended 800 by 800 pixels" />
-            <span class="image-fallback">Upload event-poster.jpg<br />800 x 800 px</span>
+          <div class="poster-frame media-slot image-check reveal">
+            <img src="images/event-poster.jpg" alt="Event promotional poster for After MBBS Online Conclave, recommended 900 by 900 pixels" />
+            <span class="image-fallback">event-poster.jpg<br />900 x 900 px</span>
           </div>
         </div>
-        <div class="container countdown-wrap" aria-label="Countdown to September 11, 2025, 6 PM IST">
-          <div class="countdown">
-            <div class="count-box"><strong id="days">00</strong><span>Days</span></div>
-            <div class="count-box"><strong id="hours">00</strong><span>Hours</span></div>
-            <div class="count-box"><strong id="minutes">00</strong><span>Minutes</span></div>
-            <div class="count-box"><strong id="seconds">00</strong><span>Seconds</span></div>
+        <div class="wave" aria-hidden="true"><svg viewBox="0 0 1440 100" preserveAspectRatio="none"><path fill="currentColor" d="M0 40 C220 120 420 0 720 62 C1020 124 1220 18 1440 72 V100 H0Z"/></svg></div>
+      </section>
+
+      <section class="org-strip section-pad">
+        <div class="container org-card reveal">
+          <div class="org-logo logo-slot image-check">
+            <img src="images/ima-logo.png" alt="IMA Parippally official logo, centered organization mark" />
+            <span class="image-fallback">ima-logo.png<br />300 x 300 px</span>
+          </div>
+          <h2>Indian Medical Association</h2>
+          <p class="subline">Parippally Branch - Kerala State</p>
+          <p>The IMA Parippally Branch proudly presents this flagship 3-day online conclave to guide the next generation of doctors toward extraordinary careers - in Kerala, across India, and around the world.</p>
+          <div class="trust-row">
+            <span class="trust-chip">🏥 Est. 1928 · All India Presence</span>
+            <span class="trust-chip">🩺 Parippally Branch · Kerala</span>
+            <span class="trust-chip">🌍 Doctors Across 50+ Countries</span>
           </div>
         </div>
       </section>
 
-      <section class="section-pad" id="why-attend">
+      <section class="why section-pad" id="why">
         <div class="container">
-          <div class="section-heading">
-            <h2>Why This Conclave?</h2>
-            <p>Answers you've been searching for - from doctors who've lived it.</p>
-          </div>
-          <div class="why-grid">
-            <article class="info-card"><span class="info-icon">🌍</span><h3>Global Perspectives</h3><p>Hear from doctors working in GCC &amp; abroad</p></article>
-            <article class="info-card"><span class="info-icon">🔬</span><h3>11 Career Paths</h3><p>From clinical to entrepreneur, all mapped out</p></article>
-            <article class="info-card"><span class="info-icon">🎙</span><h3>Live Q&amp;A</h3><p>Ask your questions directly to experts</p></article>
-            <article class="info-card"><span class="info-icon">📜</span><h3>Networking</h3><p>Connect with peers &amp; mentors</p></article>
-            <article class="info-card"><span class="info-icon">💡</span><h3>Actionable Insights</h3><p>Walk away with a clear next step</p></article>
-            <article class="info-card"><span class="info-icon">🏥</span><h3>IMA Backed</h3><p>Credibility you can trust</p></article>
+          <div class="section-heading reveal"><h2>Why This Conclave Changes Everything</h2><p>Designed for the confused, ambitious, and curious MBBS doctor.</p></div>
+          <div class="grid">
+            <article class="info-card reveal"><span class="icon">🌍</span><h3>Global Insights</h3><p>Doctors from GCC sharing what really works abroad</p></article>
+            <article class="info-card reveal"><span class="icon">🚀</span><h3>11 Career Paths</h3><p>Mapped, demystified, made real</p></article>
+            <article class="info-card reveal"><span class="icon">🎙</span><h3>Live Q&amp;A</h3><p>10 direct questions per Interactive Pass holder</p></article>
+            <article class="info-card reveal"><span class="icon">🎬</span><h3>Recorded Access</h3><p>Miss nothing. Sessions recorded.</p></article>
+            <article class="info-card reveal"><span class="icon">🤝</span><h3>Community</h3><p>WhatsApp mentorship community for 1 full year</p></article>
+            <article class="info-card reveal"><span class="icon">✅</span><h3>IMA Certified</h3><p>Organized by a trusted national medical body</p></article>
           </div>
         </div>
       </section>
 
-      <section class="section-pad" id="speakers">
+      <section class="speakers section-pad" id="speakers">
         <div class="container">
-          <div class="section-heading">
-            <h2>Your Guides for the Journey</h2>
-          </div>
-          <div class="speakers-grid">
-            <article class="speaker-card">
-              <div class="speaker-photo media-slot round image-check">
-                <img src="images/doctor1.jpg" alt="Speaker 1 professional doctor portrait, recommended 400 by 400 pixels" />
-                <span class="image-fallback">Upload doctor1.jpg<br />400 x 400 px</span>
+          <div class="section-heading reveal"><h2>Your Guides for the Journey</h2></div>
+          <div class="speaker-grid">
+            <article class="speaker-card reveal">
+              <div class="speaker-photo media-slot image-check">
+                <img src="images/doctor1.jpg" alt="Speaker 1 GCC doctor professional photo, recommended 500 by 500 pixels" />
+                <span class="image-fallback">doctor1.jpg<br />500 x 500 px</span>
               </div>
-              <h3>[DR. FULL NAME]</h3>
-              <span class="badge">[Current Position]</span>
-              <p class="muted-line">[UAE / Qatar / Saudi Arabia]</p>
-              <p>[Short professional bio - upload with photos] A GCC experienced doctor will share practical routes, licensing realities, and how to make informed international career decisions after MBBS.</p>
-              <a class="social-link" href="#" aria-label="Speaker 1 LinkedIn profile">in</a>
-            </article>
-            <article class="speaker-card">
-              <div class="speaker-photo media-slot round image-check">
-                <img src="images/doctor2.jpg" alt="Speaker 2 professional doctor portrait, recommended 400 by 400 pixels" />
-                <span class="image-fallback">Upload doctor2.jpg<br />400 x 400 px</span>
+              <div>
+                <h3>[DR. FULL NAME]</h3>
+                <span class="badge">[Current Position · Country: UAE/Qatar/Saudi Arabia]</span>
+                <p class="muted">GCC Doctor</p>
+                <p>[Upload with speaker photos] Practical international career guidance from a doctor who understands licensing, migration, and the first-job reality abroad.</p>
+                <a class="social-link" href="#" aria-label="Speaker 1 LinkedIn">in</a>
               </div>
-              <h3>[DR. FULL NAME]</h3>
-              <span class="badge">[Current Position]</span>
-              <p class="muted-line">[Hospital or Organization name]</p>
-              <p>[Short professional bio - upload with photos] A Kerala doctor and startup expert will unpack innovation, healthcare entrepreneurship, and new-age medical roles with grounded local context.</p>
-              <a class="social-link" href="#" aria-label="Speaker 2 LinkedIn profile">in</a>
+            </article>
+            <article class="speaker-card reveal">
+              <div class="speaker-photo media-slot image-check">
+                <img src="images/doctor2.jpg" alt="Speaker 2 Kerala or startup doctor professional photo, recommended 500 by 500 pixels" />
+                <span class="image-fallback">doctor2.jpg<br />500 x 500 px</span>
+              </div>
+              <div>
+                <h3>[DR. FULL NAME]</h3>
+                <span class="badge">[Current Position · Hospital/Organization]</span>
+                <p class="muted">Kerala/Startup Doctor</p>
+                <p>[Upload with speaker photos] Grounded insight into entrepreneurship, innovation, digital health, and emerging medical roles from a Kerala context.</p>
+                <a class="social-link" href="#" aria-label="Speaker 2 LinkedIn">in</a>
+              </div>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="section-pad" id="career-paths">
+      <section class="paths section-pad" id="career-paths">
         <div class="container">
-          <div class="section-heading">
-            <h2>11 Doors. Which One Opens for You?</h2>
+          <div class="section-heading reveal"><h2>11 Doors. Which One Opens for You?</h2><p>Swipe through every path. One of these is yours.</p></div>
+          <div class="carousel-shell reveal">
+            <button class="carousel-btn prev" type="button" id="pathPrev" aria-label="Previous career path">‹</button>
+            <div class="path-track" id="pathTrack"></div>
+            <button class="carousel-btn next" type="button" id="pathNext" aria-label="Next career path">›</button>
           </div>
-          <div class="paths-grid">
-            <article class="path-card"><span class="path-number">1</span><h3>Clinical Practice</h3><p>MBBS enough to excel and earn?</p></article>
-            <article class="path-card"><span class="path-number">2</span><h3>MD/MS Specialization</h3><p>What's new?</p></article>
-            <article class="path-card"><span class="path-number">3</span><h3>DNB Programs</h3><p>What to expect?</p></article>
-            <article class="path-card"><span class="path-number">4</span><h3>GCC Medical Careers</h3><p>Evergreen?</p></article>
-            <article class="path-card"><span class="path-number">5</span><h3>Europe</h3><p>UK, Canada, Australia, NZ - sun setting?</p></article>
-            <article class="path-card"><span class="path-number">6</span><h3>USA</h3><p>Still difficult?</p></article>
-            <article class="path-card"><span class="path-number">7</span><h3>Hospital Administration</h3><p>Do we have a role?</p></article>
-            <article class="path-card"><span class="path-number">8</span><h3>Healthcare Entrepreneurship &amp; Innovation</h3><p>Are we blind?</p></article>
-            <article class="path-card"><span class="path-number">9</span><h3>Medical Research</h3><p>Designing the future?</p></article>
-            <article class="path-card"><span class="path-number">10</span><h3>Telemedicine &amp; Digital Health</h3><p>The next frontier?</p></article>
-            <article class="path-card"><span class="path-number">11</span><h3>How to Find Your Passion</h3><p>The question nobody asks?</p></article>
-          </div>
+          <div class="dots" id="pathDots" aria-label="Career path progress"></div>
         </div>
       </section>
 
-      <section class="section-pad agenda" id="agenda">
+      <section class="agenda section-pad" id="agenda">
         <div class="container">
-          <div class="section-heading">
-            <h2>3 Days. 3 Revelations.</h2>
+          <div class="section-heading reveal"><h2>3 Days. 3 Revelations.</h2><p>Evening 6:00 PM - 9:00 PM IST · Live on Zoom</p></div>
+          <div class="tabs reveal" role="tablist" aria-label="Agenda days">
+            <button class="tab-btn active" type="button" data-tab="day1">Day 1 - Sept 11</button>
+            <button class="tab-btn" type="button" data-tab="day2">Day 2 - Sept 12</button>
+            <button class="tab-btn" type="button" data-tab="day3">Day 3 - Sept 13</button>
           </div>
-          <div class="tabs" role="tablist" aria-label="Event agenda days">
-            <button class="tab-btn active" type="button" role="tab" aria-selected="true" data-tab="day1">Day 1 - Sept 11</button>
-            <button class="tab-btn" type="button" role="tab" aria-selected="false" data-tab="day2">Day 2 - Sept 12</button>
-            <button class="tab-btn" type="button" role="tab" aria-selected="false" data-tab="day3">Day 3 - Sept 13</button>
-          </div>
-          <div class="timeline active" id="day1" role="tabpanel">
-            <div class="timeline-item"><div class="timeline-time">6:00 PM</div><div class="timeline-content">Welcome &amp; Introduction</div></div>
-            <div class="timeline-item"><div class="timeline-time">6:15 PM</div><div class="timeline-content">Session 1: Clinical Practice, MD/MS Specialization &amp; DNB Programs</div></div>
-            <div class="timeline-item"><div class="timeline-time">7:15 PM</div><div class="timeline-content">Session 2: Building a practical PG decision framework</div></div>
-            <div class="timeline-item"><div class="timeline-time">8:15 PM</div><div class="timeline-content">Live Q&amp;A with Speakers</div></div>
-            <div class="timeline-item"><div class="timeline-time">8:45 PM</div><div class="timeline-content">Open Discussion &amp; Networking</div></div>
-            <div class="timeline-item"><div class="timeline-time">9:00 PM</div><div class="timeline-content">Closing Remarks</div></div>
-          </div>
-          <div class="timeline" id="day2" role="tabpanel">
-            <div class="timeline-item"><div class="timeline-time">6:00 PM</div><div class="timeline-content">Welcome &amp; Introduction</div></div>
-            <div class="timeline-item"><div class="timeline-time">6:15 PM</div><div class="timeline-content">Session 1: GCC, Europe and USA medical career routes</div></div>
-            <div class="timeline-item"><div class="timeline-time">7:15 PM</div><div class="timeline-content">Session 2: Exams, licensing, migration decisions and first jobs abroad</div></div>
-            <div class="timeline-item"><div class="timeline-time">8:15 PM</div><div class="timeline-content">Live Q&amp;A with Speakers</div></div>
-            <div class="timeline-item"><div class="timeline-time">8:45 PM</div><div class="timeline-content">Open Discussion &amp; Networking</div></div>
-            <div class="timeline-item"><div class="timeline-time">9:00 PM</div><div class="timeline-content">Closing Remarks</div></div>
-          </div>
-          <div class="timeline" id="day3" role="tabpanel">
-            <div class="timeline-item"><div class="timeline-time">6:00 PM</div><div class="timeline-content">Welcome &amp; Introduction</div></div>
-            <div class="timeline-item"><div class="timeline-time">6:15 PM</div><div class="timeline-content">Session 1: Administration, research, entrepreneurship and digital health</div></div>
-            <div class="timeline-item"><div class="timeline-time">7:15 PM</div><div class="timeline-content">Session 2: How to find your passion and choose your next step</div></div>
-            <div class="timeline-item"><div class="timeline-time">8:15 PM</div><div class="timeline-content">Live Q&amp;A with Speakers</div></div>
-            <div class="timeline-item"><div class="timeline-time">8:45 PM</div><div class="timeline-content">Open Discussion &amp; Networking</div></div>
-            <div class="timeline-item"><div class="timeline-time">9:00 PM</div><div class="timeline-content">Closing Remarks</div></div>
-          </div>
+          <div class="recording-note reveal">🎬 All sessions will be recorded and shared with registered participants.</div>
+          <div class="timeline active reveal" id="day1"><p class="timeline-note">Clinical, Academic &amp; Specialization Paths</p></div>
+          <div class="timeline reveal" id="day2"><p class="timeline-note">Global &amp; International Opportunities (GCC, Europe, USA)</p></div>
+          <div class="timeline reveal" id="day3"><p class="timeline-note">Entrepreneurship, Research, Digital Health &amp; Passion</p></div>
         </div>
       </section>
 
-      <section class="section-pad" id="pricing">
+      <section class="pricing section-pad" id="pricing">
         <div class="container">
-          <div class="section-heading">
-            <h2>Choose Your Pass</h2>
-          </div>
+          <div class="section-heading reveal"><h2>Choose Your Pass</h2><p>Both passes include access to recorded sessions.</p></div>
           <div class="pricing-grid">
-            <article class="pricing-card">
-              <span class="price-chip">Best Value</span>
-              <h3>Viewer Pass</h3>
-              <div class="price">₹249</div>
+            <article class="pricing-card viewer reveal">
+              <div class="price-head"><div class="price-name">Viewer Pass</div><div class="price">Rs.249</div><span class="chip">Best Value</span></div>
               <ul class="features">
-                <li>✅ Live webinar access (all 3 days)</li>
+                <li>✅ Live webinar - all 3 days</li>
                 <li>✅ Access to presentation slides</li>
-                <li>✅ WhatsApp community support for 1 year</li>
+                <li>✅ Recorded sessions available</li>
+                <li>✅ WhatsApp mentorship community - 1 year</li>
                 <li class="no">❌ Live Q&amp;A participation</li>
+                <li class="no">❌ Doctor discussion session</li>
                 <li class="no">❌ Certificate</li>
               </ul>
-              <button class="btn btn-cta pass-select" type="button" data-pass="viewer">Register as Viewer</button>
+              <div class="price-action"><button class="btn btn-teal pass-select" type="button" data-pass="viewer">Register as Viewer</button></div>
             </article>
-            <article class="pricing-card featured">
-              <span class="price-chip">Most Popular</span>
-              <h3>Interactive Pass</h3>
-              <div class="price">₹449</div>
+            <article class="pricing-card interactive reveal">
+              <span class="popular">⭐ Most Popular</span>
+              <div class="price-head"><div class="price-name">Interactive Pass</div><div class="price">Rs.449</div></div>
               <ul class="features">
-                <li>✅ Live webinar access (all 3 days)</li>
+                <li>✅ Live webinar - all 3 days</li>
                 <li>✅ Access to presentation slides</li>
-                <li>✅ WhatsApp community support for 1 year</li>
+                <li>✅ Recorded sessions available</li>
+                <li>✅ WhatsApp mentorship community - 1 year</li>
                 <li>✅ Ask up to 10 live questions</li>
                 <li>✅ Join exclusive doctor discussion session</li>
                 <li>✅ Priority networking access</li>
                 <li class="no">❌ Certificate</li>
               </ul>
-              <button class="btn btn-cta pass-select" type="button" data-pass="interactive">Register as Interactive</button>
+              <div class="price-action"><button class="btn btn-pink ripple pass-select" type="button" data-pass="interactive">Register as Interactive</button></div>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="section-pad registration" id="register">
+      <section class="registration section-pad" id="register">
         <div class="container">
-          <div class="section-heading">
-            <h2>Secure Your Spot Today</h2>
-            <p>Limited seats. Don't miss out.</p>
-          </div>
-          <form class="form-card" id="registrationForm" novalidate>
+          <div class="section-heading reveal"><h2>Secure Your Spot Today</h2><p>Limited seats. Don't be the doctor who almost attended.</p></div>
+          <form class="form-card reveal" id="registrationForm" novalidate>
             <div class="form-grid">
-              <div class="field" data-required>
-                <label for="fullName">Full Name *</label>
-                <input id="fullName" name="fullName" type="text" autocomplete="name" required />
-                <span class="error-message">Full name is required.</span>
-              </div>
-              <div class="field" data-required>
-                <label for="email">Email Address *</label>
-                <input id="email" name="email" type="email" autocomplete="email" required />
-                <span class="error-message">A valid email address is required.</span>
-              </div>
-              <div class="field" data-required>
-                <label for="phone">Phone Number *</label>
-                <div class="phone-row">
-                  <select id="countryCode" name="countryCode" aria-label="Country code">
-                    <option value="+91">+91</option>
-                  </select>
-                  <input id="phone" name="phone" type="tel" autocomplete="tel" required />
-                </div>
-                <span class="error-message">Phone number is required.</span>
-              </div>
-              <div class="field">
-                <label for="institution">Medical College / Institution</label>
-                <input id="institution" name="institution" type="text" />
-              </div>
-              <div class="field">
-                <label for="graduation">Year of Graduation</label>
-                <select id="graduation" name="graduation">
-                  <option value="">Select year/status</option>
-                  <option>2019</option><option>2020</option><option>2021</option><option>2022</option><option>2023</option><option>2024</option><option>2025</option>
-                  <option>Intern</option><option>Recently Graduated</option>
-                </select>
-              </div>
-              <div class="field">
-                <label for="status">Current Status</label>
-                <select id="status" name="status">
-                  <option value="">Select status</option>
-                  <option>Intern</option><option>Houseman</option><option>Preparing for PG</option><option>Working abroad</option><option>Other</option>
-                </select>
-              </div>
+              <div class="field" data-required><label for="fullName">Full Name *</label><input id="fullName" name="fullName" type="text" autocomplete="name" required /><span class="error-message">Full name is required.</span></div>
+              <div class="field" data-required><label for="email">Email Address *</label><input id="email" name="email" type="email" autocomplete="email" required /><span class="error-message">Valid email is required.</span></div>
+              <div class="field full" data-required><label for="phone">Phone Number *</label><div class="phone-row"><span class="prefix">+91</span><input id="phone" name="phone" type="tel" autocomplete="tel" required /></div><span class="error-message">Phone number is required.</span></div>
+              <div class="field full"><label for="institution">Medical College / Institution</label><input id="institution" name="institution" type="text" /></div>
+              <div class="field"><label for="graduation">Year of Graduation</label><select id="graduation" name="graduation"><option value="">Select</option><option>2019</option><option>2020</option><option>2021</option><option>2022</option><option>2023</option><option>2024</option><option>2025</option><option>2026</option><option>Currently Intern</option><option>Other</option></select></div>
+              <div class="field"><label for="status">Current Status</label><select id="status" name="status"><option value="">Select</option><option>Final Year Student</option><option>Intern</option><option>Houseman</option><option>PG Aspirant</option><option>Working Abroad</option><option>Other</option></select></div>
               <fieldset class="radio-group" data-required>
                 <legend>Pass Type *</legend>
                 <div class="radio-options">
-                  <label class="radio-option"><input type="radio" name="passType" value="viewer" required /> Viewer Pass - ₹249</label>
-                  <label class="radio-option"><input type="radio" name="passType" value="interactive" required /> Interactive Pass - ₹449</label>
+                  <label class="radio-card"><input type="radio" name="passType" value="viewer" required /> ⬤ Viewer Pass - Rs.249</label>
+                  <label class="radio-card"><input type="radio" name="passType" value="interactive" required /> ⬤ Interactive Pass - Rs.449</label>
                 </div>
                 <span class="error-message">Please select a pass type.</span>
               </fieldset>
-              <div class="field full">
-                <label for="source">How did you hear about this?</label>
-                <select id="source" name="source">
-                  <option value="">Select source</option>
-                  <option>IMA</option><option>WhatsApp</option><option>Instagram</option><option>Friend</option><option>Other</option>
-                </select>
-              </div>
-              <div class="submit-row">
-                <button class="btn btn-cta" type="submit" style="width: 100%;">Register &amp; Proceed to Payment</button>
-              </div>
+              <div class="field full"><label for="referral">Referral Source</label><select id="referral" name="referral"><option value="">Select</option><option>IMA Member</option><option>WhatsApp</option><option>Instagram</option><option>Facebook</option><option>Friend/Colleague</option><option>Other</option></select></div>
+              <div class="submit-row"><button class="btn btn-pink ripple" type="submit" style="width:100%">Register &amp; Get Payment Details →</button></div>
             </div>
-            <p class="form-note">After registration, payment details will be sent via WhatsApp and email. For queries: imaparippally@gmail.com | +918281980653</p>
+            <p class="contact-note">📧 imaparippally@gmail.com | 📞 +91 82819 80653 | 💬 WhatsApp: +91 77363 03032</p>
           </form>
         </div>
       </section>
 
-      <section class="section-pad" id="faq">
+      <section class="faq section-pad" id="faq">
         <div class="container">
-          <div class="section-heading">
-            <h2>Frequently Asked Questions</h2>
-          </div>
+          <div class="section-heading reveal"><h2>Frequently Asked Questions</h2></div>
           <div class="faq-list">
-            <article class="faq-item"><button class="faq-question" type="button"><span>Who is this conclave for?</span><span>+</span></button><div class="faq-answer"><p>Final year MBBS students, interns, and recently graduated doctors exploring career options.</p></div></article>
-            <article class="faq-item"><button class="faq-question" type="button"><span>Will I get a recording after the event?</span><span>+</span></button><div class="faq-answer"><p>Presentation slides will be shared. Viewer Pass holders get access to slides; recording availability will be announced.</p></div></article>
-            <article class="faq-item"><button class="faq-question" type="button"><span>How do I join the Zoom session?</span><span>+</span></button><div class="faq-answer"><p>Zoom link will be sent to your registered email after payment confirmation.</p></div></article>
-            <article class="faq-item"><button class="faq-question" type="button"><span>What is the WhatsApp community?</span><span>+</span></button><div class="faq-answer"><p>An exclusive peer and mentor support group valid for 1 year, available for both pass types.</p></div></article>
-            <article class="faq-item"><button class="faq-question" type="button"><span>Can I get a refund?</span><span>+</span></button><div class="faq-answer"><p>Registrations are non-refundable. Please contact us for rescheduling.</p></div></article>
-            <article class="faq-item"><button class="faq-question" type="button"><span>Is the Interactive Pass worth it?</span><span>+</span></button><div class="faq-answer"><p>If you want to ask doctors your specific questions live and join the private discussion session, yes - absolutely.</p></div></article>
-            <article class="faq-item"><button class="faq-question" type="button"><span>How will I pay?</span><span>+</span></button><div class="faq-answer"><p>Payment instructions (UPI/bank transfer) are sent via WhatsApp after form submission.</p></div></article>
-            <article class="faq-item"><button class="faq-question" type="button"><span>Is there a certificate?</span><span>+</span></button><div class="faq-answer"><p>No certificate is provided for either pass at this time.</p></div></article>
+            <article class="faq-item reveal"><button class="faq-q" type="button"><span>Who should attend this conclave?</span><span class="arrow">▼</span></button><div class="faq-a"><p>Final year MBBS students, interns, and recently graduated doctors who want clarity on their next career step.</p></div></article>
+            <article class="faq-item reveal"><button class="faq-q" type="button"><span>Are sessions recorded?</span><span class="arrow">▼</span></button><div class="faq-a"><p>Yes. All 3 sessions will be recorded and shared with all registered participants regardless of pass type.</p></div></article>
+            <article class="faq-item reveal"><button class="faq-q" type="button"><span>How do I receive the Zoom link?</span><span class="arrow">▼</span></button><div class="faq-a"><p>After payment confirmation, the Zoom link and joining details will be sent to your registered WhatsApp number and email.</p></div></article>
+            <article class="faq-item reveal"><button class="faq-q" type="button"><span>What is the WhatsApp mentorship community?</span><span class="arrow">▼</span></button><div class="faq-a"><p>An exclusive peer and expert support group active for 1 full year, available to both Viewer and Interactive Pass holders.</p></div></article>
+            <article class="faq-item reveal"><button class="faq-q" type="button"><span>Can Interactive Pass holders really ask questions live?</span><span class="arrow">▼</span></button><div class="faq-a"><p>Yes - up to 10 questions per session across the 3 days, with priority access during the dedicated Q&amp;A block.</p></div></article>
+            <article class="faq-item reveal"><button class="faq-q" type="button"><span>How does payment work?</span><span class="arrow">▼</span></button><div class="faq-a"><p>After submitting the registration form, UPI/bank transfer details are sent via WhatsApp. Seat is confirmed after payment.</p></div></article>
+            <article class="faq-item reveal"><button class="faq-q" type="button"><span>Is there a certificate of participation?</span><span class="arrow">▼</span></button><div class="faq-a"><p>No certificate is issued for this conclave at this time.</p></div></article>
+            <article class="faq-item reveal"><button class="faq-q" type="button"><span>Can I upgrade from Viewer to Interactive Pass later?</span><span class="arrow">▼</span></button><div class="faq-a"><p>Contact us on WhatsApp at +91 77363 03032 for upgrade requests before the event date.</p></div></article>
           </div>
         </div>
       </section>
 
-      <section class="section-pad testimonials" id="testimonials">
+      <section class="testimonials section-pad" id="testimonials">
         <div class="container">
-          <div class="section-heading">
-            <h2>What Doctors Say</h2>
-          </div>
-          <div class="testimonial-track" aria-label="Testimonials carousel">
-            <article class="testimonial-card"><div class="avatar">AR</div><h3>Dr. Anjali R.</h3><p>Batch 2024</p><blockquote>"I felt lost after MBBS; structured guidance like this would have saved months of confusion."</blockquote></article>
-            <article class="testimonial-card"><div class="avatar">VN</div><h3>Dr. Vishnu N.</h3><p>Batch 2023</p><blockquote>"Hearing from doctors who have actually walked these routes makes every option feel clearer."</blockquote></article>
-            <article class="testimonial-card"><div class="avatar">SM</div><h3>Dr. Sara M.</h3><p>Batch 2025</p><blockquote>"Career choices after MBBS need honest conversations, practical maps, and mentors who understand our doubts."</blockquote></article>
-          </div>
-        </div>
-      </section>
-
-      <section class="partners" id="partners" aria-label="Sponsors and partners">
-        <div class="container partner-row">
-          <strong>Supported By</strong>
-          <div class="partner-logo media-slot image-check">
-            <img src="images/partner-logo-1.png" alt="Partner or sponsor logo, recommended 360 by 144 pixels" />
-            <span class="image-fallback">Upload partner-logo-1.png<br />360 x 144 px</span>
+          <div class="section-heading reveal"><h2>What Doctors Are Saying</h2></div>
+          <div class="testimonial-window reveal">
+            <div class="testimonial-track" id="testimonialTrack">
+              <article class="testimonial-card"><div class="avatar">AK</div><h3>Dr. [Placeholder Name]</h3><p>MBBS 2024 · Kerala Medical College</p><blockquote>"I had no idea what to do after my internship. Events like this would have changed everything for me."</blockquote></article>
+              <article class="testimonial-card"><div class="avatar">RN</div><h3>Dr. [Placeholder Name]</h3><p>MBBS 2023 · Kerala Medical College</p><blockquote>"The hardest part after MBBS is knowing which path is real. Guidance from doctors matters."</blockquote></article>
+              <article class="testimonial-card"><div class="avatar">FM</div><h3>Dr. [Placeholder Name]</h3><p>MBBS 2025 · Kerala Medical College</p><blockquote>"A structured look at careers abroad, PG routes, and new medical roles is exactly what we need."</blockquote></article>
+              <article class="testimonial-card"><div class="avatar">JV</div><h3>Dr. [Placeholder Name]</h3><p>MBBS 2022 · Kerala Medical College</p><blockquote>"I wish someone had mapped these options before I spent a year confused after graduation."</blockquote></article>
+            </div>
           </div>
         </div>
       </section>
@@ -1521,186 +1893,269 @@
       <div class="container footer-grid">
         <div>
           <a class="brand" href="#home">
-            <span class="logo-slot image-check">
-              <img src="images/ima-logo.png" alt="IMA Parippally official logo, footer display, 96 by 96 pixels" />
-              <span class="image-fallback">IMA</span>
-            </span>
-            <span>IMA Parippally</span>
+            <span class="logo-slot image-check"><img src="images/ima-logo.png" alt="IMA Parippally official logo in footer" /><span class="image-fallback">ima-logo.png</span></span>
+            <span class="logo-text"><strong>Indian Medical Association</strong><span>Parippally Branch · Kerala State</span></span>
           </a>
-          <p>IMA Parippally Branch · Empowering Doctors Across Kerala</p>
+          <p>Empowering Doctors. Building Careers.</p>
         </div>
         <div>
           <h3>Quick Links</h3>
-          <ul class="footer-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#speakers">Speakers</a></li>
-            <li><a href="#career-paths">Career Paths</a></li>
-            <li><a href="#register">Register</a></li>
-            <li><a href="#faq">FAQ</a></li>
+          <ul>
+            <li><a href="#home">Home</a></li><li><a href="#speakers">Speakers</a></li><li><a href="#career-paths">Career Paths</a></li><li><a href="#agenda">Agenda</a></li><li><a href="#register">Register</a></li><li><a href="#faq">FAQ</a></li>
           </ul>
         </div>
         <div>
           <h3>Contact</h3>
-          <ul class="contact-list">
-            <li>📧 <a href="mailto:imaparippally@gmail.com">imaparippally@gmail.com</a></li>
-            <li>📞 <a href="tel:+918281980653">+91 82819 80653</a></li>
-            <li>💬 <a href="https://wa.me/917736303032" target="_blank" rel="noopener">WhatsApp: +91 77363 03032</a></li>
-          </ul>
-          <div class="socials" aria-label="Social links">
-            <a href="#" aria-label="Facebook">Facebook</a>
-            <a href="#" aria-label="Instagram">Instagram</a>
-            <a href="#" aria-label="LinkedIn">LinkedIn</a>
-          </div>
+          <ul><li>📧 <a href="mailto:imaparippally@gmail.com">imaparippally@gmail.com</a></li><li>📞 <a href="tel:+918281980653">+91 82819 80653</a></li><li>💬 <a href="https://wa.me/917736303032">WhatsApp: +91 77363 03032</a></li></ul>
+          <div class="socials"><a href="#">Facebook</a><a href="#">Instagram</a><a href="#">LinkedIn</a></div>
         </div>
       </div>
-      <div class="footer-bottom">© 2025 IMA Parippally Branch. All rights reserved.</div>
+      <div class="footer-bottom">© 2026 Indian Medical Association - Parippally Branch, Kerala. All rights reserved.</div>
     </footer>
 
-    <a class="whatsapp-float" href="https://wa.me/917736303032" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">💬</a>
-    <a class="mobile-register-bar" id="mobileRegisterBar" href="#register">Seats Filling Fast - Register Now ₹249</a>
+    <a class="float-whatsapp" href="https://wa.me/917736303032" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp">
+      <span class="tip">Chat with us</span>
+      <svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true"><path fill="#fff" d="M16 3C8.8 3 3 8.8 3 16c0 2.3.6 4.5 1.7 6.4L3.5 29l6.8-1.8c1.8 1 3.8 1.5 5.9 1.5 7.2 0 13-5.8 13-13S23.2 3 16 3Zm5.8 15.5c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.5-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.2-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1.1 2.8 1.2 3c.2.2 2.1 3.2 5 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.9-.8 2.1-1.5.3-.8.3-1.4.2-1.5 0-.2-.2-.3-.5-.4Z"/></svg>
+    </a>
+    <button class="to-top" id="toTop" type="button" aria-label="Scroll to top">↑</button>
+    <a class="mobile-register-bar" id="mobileRegisterBar" href="#register">Seats Filling Fast - Register Now Rs.249</a>
 
-    <div class="modal" id="thankYouModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal" id="successModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
       <div class="modal-card">
-        <h2 id="modalTitle">Thank You</h2>
-        <p>Your registration details are noted. Payment instructions will be sent through WhatsApp and email after review.</p>
+        <h2 id="modalTitle">🎉 You're In!</h2>
+        <p id="modalText">Thank you! Your registration is confirmed.</p>
+        <p>Payment details will be sent to your WhatsApp and email shortly.</p>
         <div class="modal-actions">
-          <a class="btn btn-cta" href="https://wa.me/917736303032" target="_blank" rel="noopener">Continue on WhatsApp</a>
-          <button class="btn btn-outline" type="button" id="closeModal">Close</button>
+          <a class="btn btn-white" href="https://wa.me/917736303032" target="_blank" rel="noopener">Chat with us on WhatsApp →</a>
+          <button class="btn btn-pink" type="button" id="closeModal">Close</button>
         </div>
       </div>
     </div>
 
     <script>
-      const header = document.getElementById("siteHeader");
-      const mobileRegisterBar = document.getElementById("mobileRegisterBar");
-      const hero = document.getElementById("home");
-      const countdownTarget = new Date("2025-09-11T18:00:00+05:30").getTime();
+      const $ = (selector, root = document) => root.querySelector(selector);
+      const $$ = (selector, root = document) => Array.from(root.querySelectorAll(selector));
+      const header = $("#header");
+      const mobilePanel = $("#mobilePanel");
+      const mobileRegisterBar = $("#mobileRegisterBar");
+      const toTop = $("#toTop");
+      const target = new Date("2026-09-11T18:00:00+05:30").getTime();
 
-      function updateHeaderState() {
-        const pastHero = window.scrollY > hero.offsetHeight - 120;
-        header.classList.toggle("scrolled", window.scrollY > 16);
-        mobileRegisterBar.classList.toggle("visible", pastHero);
-      }
-
-      function pad(value) {
-        return String(value).padStart(2, "0");
+      function updateScrollUi() {
+        const y = window.scrollY;
+        header.classList.toggle("scrolled", y > 12);
+        mobileRegisterBar.classList.toggle("visible", y > window.innerHeight + 200);
+        toTop.classList.toggle("visible", y > 400);
       }
 
       function updateCountdown() {
-        const remaining = Math.max(0, countdownTarget - Date.now());
-        const days = Math.floor(remaining / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((remaining / (1000 * 60 * 60)) % 24);
-        const minutes = Math.floor((remaining / (1000 * 60)) % 60);
-        const seconds = Math.floor((remaining / 1000) % 60);
-
-        document.getElementById("days").textContent = pad(days);
-        document.getElementById("hours").textContent = pad(hours);
-        document.getElementById("minutes").textContent = pad(minutes);
-        document.getElementById("seconds").textContent = pad(seconds);
+        const remaining = target - Date.now();
+        if (remaining <= 0) {
+          $("#countdownWrap").style.display = "none";
+          return;
+        }
+        const d = Math.floor(remaining / 86400000);
+        const h = Math.floor((remaining / 3600000) % 24);
+        const m = Math.floor((remaining / 60000) % 60);
+        const s = Math.floor((remaining / 1000) % 60);
+        $("#days").textContent = String(d).padStart(2, "0");
+        $("#hours").textContent = String(h).padStart(2, "0");
+        $("#minutes").textContent = String(m).padStart(2, "0");
+        $("#seconds").textContent = String(s).padStart(2, "0");
       }
 
-      document.querySelectorAll(".image-check").forEach((slot) => {
-        const image = slot.querySelector("img");
+      $$(".image-check").forEach((slot) => {
+        const image = $("img", slot);
         if (!image) return;
-        image.addEventListener("load", () => {
-          slot.classList.add("image-loaded");
-          const partnerSection = slot.closest(".partners");
-          if (partnerSection) partnerSection.classList.add("visible");
-        });
+        image.addEventListener("load", () => slot.classList.add("image-loaded"));
         image.addEventListener("error", () => {
           image.style.display = "none";
           slot.classList.remove("image-loaded");
         });
-        if (image.complete && image.naturalWidth > 0) {
-          slot.classList.add("image-loaded");
-          const partnerSection = slot.closest(".partners");
-          if (partnerSection) partnerSection.classList.add("visible");
-        }
+        if (image.complete && image.naturalWidth > 0) slot.classList.add("image-loaded");
       });
 
-      document.querySelectorAll(".tab-btn").forEach((button) => {
-        button.addEventListener("click", () => {
-          document.querySelectorAll(".tab-btn").forEach((tab) => {
-            tab.classList.remove("active");
-            tab.setAttribute("aria-selected", "false");
-          });
-          document.querySelectorAll(".timeline").forEach((timeline) => timeline.classList.remove("active"));
-          button.classList.add("active");
-          button.setAttribute("aria-selected", "true");
-          document.getElementById(button.dataset.tab).classList.add("active");
-        });
+      $("#menuToggle").addEventListener("click", () => {
+        mobilePanel.classList.add("open");
+        document.body.classList.add("menu-open");
       });
-
-      document.querySelectorAll(".faq-question").forEach((button) => {
-        button.addEventListener("click", () => {
-          const item = button.closest(".faq-item");
-          const answer = item.querySelector(".faq-answer");
-          const icon = button.querySelector("span:last-child");
-          const isOpen = item.classList.toggle("open");
-          answer.style.maxHeight = isOpen ? `${answer.scrollHeight}px` : "0px";
-          icon.textContent = isOpen ? "−" : "+";
-        });
-      });
-
-      document.querySelectorAll(".pass-select").forEach((button) => {
-        button.addEventListener("click", () => {
-          const selected = document.querySelector(`input[name="passType"][value="${button.dataset.pass}"]`);
-          if (selected) selected.checked = true;
-          document.getElementById("register").scrollIntoView({ behavior: "smooth", block: "start" });
-        });
-      });
-
-      const form = document.getElementById("registrationForm");
-      const modal = document.getElementById("thankYouModal");
-      const closeModal = document.getElementById("closeModal");
-
-      function validateForm() {
-        let valid = true;
-        form.querySelectorAll(".field[data-required]").forEach((field) => {
-          const input = field.querySelector("input, select");
-          const fieldValid = input.checkValidity();
-          field.classList.toggle("error", !fieldValid);
-          valid = valid && fieldValid;
-        });
-
-        const radioGroup = form.querySelector(".radio-group[data-required]");
-        const radioValid = Boolean(form.querySelector('input[name="passType"]:checked'));
-        radioGroup.classList.toggle("error", !radioValid);
-        valid = valid && radioValid;
-        return valid;
+      $("#menuClose").addEventListener("click", closeMenu);
+      $$("#mobilePanel a").forEach((link) => link.addEventListener("click", closeMenu));
+      function closeMenu() {
+        mobilePanel.classList.remove("open");
+        document.body.classList.remove("menu-open");
       }
 
+      const pathItems = [
+        ["1", "Clinical Practice", "MBBS enough to excel and earn?"],
+        ["2", "MD/MS Specialization", "What's new and what's actually worth it?"],
+        ["3", "DNB Programs", "What should you really expect?"],
+        ["4", "GCC Medical Careers", "Still evergreen - or fading fast?"],
+        ["5", "Europe · UK · Canada · NZ · Australia", "Is the sun really setting on these paths?"],
+        ["6", "USA Medical Career", "Still difficult - or just differently difficult?"],
+        ["7", "Hospital Administration", "Do doctors actually have a role here?"],
+        ["8", "Healthcare Entrepreneurship & Innovation", "Are we the last to notice the revolution?"],
+        ["9", "Medical Research", "Who is designing the future - is it you?"],
+        ["10", "Telemedicine & Digital Health", "The next frontier - who leads it?"],
+        ["11", "Finding Your Passion", "The question no one in medical school ever asked."]
+      ];
+      const pathTrack = $("#pathTrack");
+      const pathDots = $("#pathDots");
+      pathItems.forEach(([n, title, text], index) => {
+        const wrap = document.createElement("div");
+        wrap.className = "path-slide-wrap";
+        wrap.innerHTML = `<article class="path-slide"><div class="path-num">${n}</div><h3>${title}</h3><p>${text}</p></article>`;
+        pathTrack.appendChild(wrap);
+        const dot = document.createElement("button");
+        dot.className = "dot";
+        dot.type = "button";
+        dot.setAttribute("aria-label", `Show path ${index + 1}`);
+        dot.addEventListener("click", () => setPath(index));
+        pathDots.appendChild(dot);
+      });
+      let pathIndex = 0;
+      function visiblePaths() {
+        return window.matchMedia("(min-width: 860px)").matches ? 3 : 1;
+      }
+      function setPath(index) {
+        const max = Math.max(0, pathItems.length - visiblePaths());
+        pathIndex = (index + max + 1) % (max + 1);
+        pathTrack.style.transform = `translateX(-${pathIndex * (100 / visiblePaths())}%)`;
+        $$(".dot", pathDots).forEach((dot, i) => dot.classList.toggle("active", i === pathIndex));
+      }
+      $("#pathPrev").addEventListener("click", () => setPath(pathIndex - 1));
+      $("#pathNext").addEventListener("click", () => setPath(pathIndex + 1));
+      setInterval(() => setPath(pathIndex + 1), 3500);
+
+      const schedule = [
+        ["6:00 PM", "Welcome & IMA Introduction"],
+        ["6:15 PM", "Session 1: Career Paths Group"],
+        ["7:15 PM", "Session 2: Deep Dive with Expert Speaker"],
+        ["8:15 PM", "Live Q&A (Interactive Pass holders get priority)"],
+        ["8:45 PM", "Open Networking & Mentoring Circle"],
+        ["9:00 PM", "Day Closing + Announcements"]
+      ];
+      $$(".timeline").forEach((timeline) => {
+        schedule.forEach(([time, session]) => {
+          const item = document.createElement("div");
+          item.className = "timeline-item reveal";
+          item.innerHTML = `<div class="timeline-time">${time}</div><div class="timeline-content">${session}</div>`;
+          timeline.appendChild(item);
+        });
+      });
+      $$(".tab-btn").forEach((tab) => {
+        tab.addEventListener("click", () => {
+          $$(".tab-btn").forEach((btn) => btn.classList.remove("active"));
+          $$(".timeline").forEach((panel) => panel.classList.remove("active"));
+          tab.classList.add("active");
+          $("#" + tab.dataset.tab).classList.add("active");
+        });
+      });
+
+      $$(".faq-q").forEach((button) => {
+        button.addEventListener("click", () => {
+          const item = button.closest(".faq-item");
+          const answer = $(".faq-a", item);
+          const open = item.classList.toggle("open");
+          answer.style.maxHeight = open ? `${answer.scrollHeight}px` : "0px";
+        });
+      });
+
+      $$(".pass-select").forEach((button) => {
+        button.addEventListener("click", () => {
+          const radio = $(`input[name="passType"][value="${button.dataset.pass}"]`);
+          if (radio) radio.checked = true;
+          $("#register").scrollIntoView({ behavior: "smooth", block: "start" });
+        });
+      });
+
+      const form = $("#registrationForm");
+      const modal = $("#successModal");
       form.addEventListener("submit", (event) => {
         event.preventDefault();
-        if (!validateForm()) return;
+        let valid = true;
+        $$(".field[data-required]", form).forEach((field) => {
+          const input = $("input", field);
+          const ok = input.checkValidity();
+          field.classList.toggle("error", !ok);
+          valid = valid && ok;
+        });
+        const passOk = Boolean($('input[name="passType"]:checked', form));
+        $(".radio-group", form).classList.toggle("error", !passOk);
+        valid = valid && passOk;
+        if (!valid) return;
+        $("#modalText").textContent = `Thank you, ${$("#fullName").value.trim()}! Your registration is confirmed.`;
         modal.classList.add("show");
         document.body.classList.add("modal-open");
         form.reset();
       });
-
       form.addEventListener("input", (event) => {
         const field = event.target.closest(".field");
         if (field) field.classList.remove("error");
-        form.querySelector(".radio-group").classList.remove("error");
+        $(".radio-group", form).classList.remove("error");
       });
-
-      function hideModal() {
+      $("#closeModal").addEventListener("click", closeModal);
+      modal.addEventListener("click", (event) => {
+        if (event.target === modal) closeModal();
+      });
+      function closeModal() {
         modal.classList.remove("show");
         document.body.classList.remove("modal-open");
       }
 
-      closeModal.addEventListener("click", hideModal);
-      modal.addEventListener("click", (event) => {
-        if (event.target === modal) hideModal();
-      });
-      document.addEventListener("keydown", (event) => {
-        if (event.key === "Escape") hideModal();
+      let testimonialIndex = 0;
+      let touchStart = 0;
+      const testimonialTrack = $("#testimonialTrack");
+      function setTestimonial(index) {
+        const cards = $$(".testimonial-card", testimonialTrack);
+        const visible = window.matchMedia("(min-width: 860px)").matches ? 3 : 1;
+        const max = Math.max(0, cards.length - visible);
+        testimonialIndex = (index + max + 1) % (max + 1);
+        testimonialTrack.style.transform = `translateX(-${testimonialIndex * (100 / visible)}%)`;
+      }
+      setInterval(() => setTestimonial(testimonialIndex + 1), 4000);
+      testimonialTrack.addEventListener("touchstart", (event) => (touchStart = event.touches[0].clientX), { passive: true });
+      testimonialTrack.addEventListener("touchend", (event) => {
+        const diff = touchStart - event.changedTouches[0].clientX;
+        if (Math.abs(diff) > 40) setTestimonial(testimonialIndex + (diff > 0 ? 1 : -1));
       });
 
-      window.addEventListener("scroll", updateHeaderState, { passive: true });
-      window.addEventListener("resize", updateHeaderState);
+      $$(".ripple").forEach((button) => {
+        button.addEventListener("click", (event) => {
+          const rect = button.getBoundingClientRect();
+          const burst = document.createElement("span");
+          burst.className = "click-ripple";
+          burst.style.left = `${event.clientX - rect.left}px`;
+          burst.style.top = `${event.clientY - rect.top}px`;
+          button.appendChild(burst);
+          setTimeout(() => burst.remove(), 620);
+        });
+      });
+
+      const observer = "IntersectionObserver" in window ? new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("in-view");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15 }) : null;
+      $$(".reveal").forEach((el, i) => {
+        el.style.setProperty("--delay", `${Math.min(i % 6, 5) * 80}ms`);
+        if (observer) observer.observe(el);
+        else el.classList.add("in-view");
+      });
+
+      toTop.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+      window.addEventListener("scroll", updateScrollUi, { passive: true });
+      window.addEventListener("resize", () => {
+        setPath(pathIndex);
+        setTestimonial(testimonialIndex);
+      });
+      updateScrollUi();
       updateCountdown();
-      updateHeaderState();
+      setPath(0);
+      setTestimonial(0);
       setInterval(updateCountdown, 1000);
     </script>
   </body>
