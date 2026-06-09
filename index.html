@@ -1,0 +1,1707 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Register for After MBBS? Exploring Hidden Treasures, an IMA Parippally online medical conclave exploring global and emerging career opportunities after MBBS."
+    />
+    <title>After MBBS? Exploring Hidden Treasures | IMA Parippally</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --color-primary: #1a3a5c;
+        --color-accent: #d4a017;
+        --color-bg: #f9f7f4;
+        --color-surface: #ffffff;
+        --color-text: #1c1c1e;
+        --color-muted: #6b7280;
+        --color-cta: #c0392b;
+        --color-cta-hover: #a93226;
+        --color-success: #128c4a;
+        --color-footer: #0d1f33;
+        --shadow-soft: 0 18px 45px rgba(13, 31, 51, 0.12);
+        --shadow-card: 0 12px 32px rgba(26, 58, 92, 0.1);
+        --radius: 8px;
+        --radius-pill: 999px;
+        --container: 1180px;
+        --nav-height: 76px;
+        --font-display: "Playfair Display", Georgia, serif;
+        --font-body: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        background: var(--color-bg);
+        color: var(--color-text);
+        font-family: var(--font-body);
+        line-height: 1.6;
+      }
+
+      body.modal-open {
+        overflow: hidden;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      button,
+      input,
+      select {
+        font: inherit;
+      }
+
+      section {
+        scroll-margin-top: 96px;
+      }
+
+      .container {
+        width: min(100% - 32px, var(--container));
+        margin: 0 auto;
+      }
+
+      .section-pad {
+        padding: 84px 0;
+      }
+
+      .section-heading {
+        max-width: 760px;
+        margin: 0 auto 42px;
+        text-align: center;
+      }
+
+      .section-heading h2 {
+        margin: 0;
+        color: var(--color-primary);
+        font-family: var(--font-display);
+        font-size: clamp(2.25rem, 5vw, 3.7rem);
+        line-height: 1.08;
+      }
+
+      .section-heading p {
+        margin: 14px 0 0;
+        color: var(--color-muted);
+        font-size: clamp(1rem, 2vw, 1.2rem);
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 48px;
+        padding: 0 22px;
+        border: 1px solid transparent;
+        border-radius: var(--radius-pill);
+        cursor: pointer;
+        font-weight: 800;
+        transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease, color 180ms ease;
+        white-space: nowrap;
+      }
+
+      .btn:hover {
+        transform: translateY(-2px);
+      }
+
+      .btn:focus-visible,
+      a:focus-visible,
+      input:focus-visible,
+      select:focus-visible {
+        outline: 3px solid rgba(212, 160, 23, 0.55);
+        outline-offset: 3px;
+      }
+
+      .btn-cta {
+        background: var(--color-cta);
+        color: #ffffff;
+        box-shadow: 0 12px 26px rgba(192, 57, 43, 0.3);
+      }
+
+      .btn-cta:hover {
+        background: var(--color-cta-hover);
+      }
+
+      .btn-outline {
+        border-color: var(--color-accent);
+        background: transparent;
+        color: var(--color-accent);
+      }
+
+      .btn-outline:hover {
+        background: rgba(212, 160, 23, 0.12);
+      }
+
+      .site-header {
+        position: fixed;
+        inset: 0 0 auto;
+        z-index: 50;
+        min-height: var(--nav-height);
+        background: rgba(255, 255, 255, 0.96);
+        backdrop-filter: blur(14px);
+        transition: box-shadow 180ms ease, min-height 180ms ease;
+      }
+
+      .site-header.scrolled {
+        min-height: 64px;
+        box-shadow: 0 10px 30px rgba(13, 31, 51, 0.12);
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: inherit;
+        gap: 18px;
+      }
+
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        min-width: max-content;
+        color: var(--color-primary);
+        font-weight: 900;
+      }
+
+      .logo-slot {
+        position: relative;
+        display: grid;
+        place-items: center;
+        width: 48px;
+        height: 48px;
+        overflow: hidden;
+        border: 2px solid rgba(212, 160, 23, 0.5);
+        border-radius: 50%;
+        background: #e5e7eb;
+        color: var(--color-primary);
+        font-size: 0.62rem;
+        font-weight: 800;
+        text-align: center;
+      }
+
+      .logo-slot img,
+      .media-slot img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .image-fallback {
+        position: absolute;
+        inset: 0;
+        display: grid;
+        place-items: center;
+        padding: 12px;
+        background: #e5e7eb;
+        color: #4b5563;
+        font-size: 0.78rem;
+        font-weight: 700;
+        line-height: 1.25;
+        text-align: center;
+      }
+
+      .image-loaded .image-fallback {
+        display: none;
+      }
+
+      .nav-links {
+        display: none;
+        align-items: center;
+        gap: 24px;
+        color: var(--color-primary);
+        font-weight: 700;
+      }
+
+      .nav-links a {
+        position: relative;
+      }
+
+      .nav-links a::after {
+        position: absolute;
+        right: 0;
+        bottom: -8px;
+        left: 0;
+        height: 2px;
+        background: var(--color-accent);
+        content: "";
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 180ms ease;
+      }
+
+      .nav-links a:hover::after {
+        transform: scaleX(1);
+      }
+
+      .nav-cta {
+        display: none;
+      }
+
+      .hero {
+        position: relative;
+        min-height: 100vh;
+        padding: calc(var(--nav-height) + 44px) 0 52px;
+        overflow: hidden;
+        background:
+          radial-gradient(circle at 18% 20%, rgba(255, 255, 255, 0.16), transparent 28%),
+          radial-gradient(circle at 80% 26%, rgba(212, 160, 23, 0.2), transparent 32%),
+          var(--color-primary);
+        color: #ffffff;
+      }
+
+      .hero::after {
+        position: absolute;
+        bottom: -110px;
+        left: -160px;
+        width: 72vw;
+        height: 220px;
+        background: linear-gradient(90deg, rgba(212, 160, 23, 0.98), rgba(212, 160, 23, 0.42));
+        content: "";
+        transform: rotate(-12deg);
+        transform-origin: left center;
+      }
+
+      .hero-grid {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        align-items: center;
+        gap: 42px;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        width: fit-content;
+        margin: 0 0 18px;
+        padding: 8px 14px;
+        border: 1px solid rgba(212, 160, 23, 0.55);
+        border-radius: var(--radius-pill);
+        color: #f5db8b;
+        font-size: 0.84rem;
+        font-weight: 900;
+        letter-spacing: 0;
+        text-transform: uppercase;
+      }
+
+      .hero h1 {
+        margin: 0;
+        color: var(--color-accent);
+        font-family: var(--font-display);
+        font-size: clamp(4rem, 14vw, 7.2rem);
+        line-height: 0.9;
+      }
+
+      .hero h2 {
+        margin: 12px 0 0;
+        color: #ffffff;
+        font-family: var(--font-display);
+        font-size: clamp(2.35rem, 8vw, 4.8rem);
+        line-height: 1;
+      }
+
+      .tagline {
+        max-width: 760px;
+        margin: 24px 0 0;
+        color: rgba(255, 255, 255, 0.78);
+        font-size: clamp(1.05rem, 2vw, 1.25rem);
+      }
+
+      .meta-pills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin: 28px 0 0;
+      }
+
+      .meta-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        min-height: 42px;
+        padding: 0 14px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        border-radius: var(--radius-pill);
+        background: rgba(255, 255, 255, 0.08);
+        color: rgba(255, 255, 255, 0.92);
+        font-weight: 700;
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        margin-top: 32px;
+      }
+
+      .hero-poster-wrap {
+        position: relative;
+        justify-self: center;
+        width: min(78vw, 390px);
+        aspect-ratio: 1;
+        border: 9px solid var(--color-accent);
+        border-radius: 50%;
+        box-shadow: 0 32px 70px rgba(0, 0, 0, 0.36);
+        background: #e5e7eb;
+      }
+
+      .hero-poster-wrap::before {
+        position: absolute;
+        inset: -24px;
+        z-index: -1;
+        border: 1px solid rgba(212, 160, 23, 0.32);
+        border-radius: 50%;
+        content: "";
+      }
+
+      .media-slot {
+        position: relative;
+        overflow: hidden;
+        background: #e5e7eb;
+      }
+
+      .media-slot.round {
+        border-radius: 50%;
+      }
+
+      .countdown-wrap {
+        position: relative;
+        z-index: 2;
+        margin-top: 42px;
+      }
+
+      .countdown {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+        max-width: 700px;
+      }
+
+      .count-box {
+        min-height: 104px;
+        padding: 16px;
+        border: 1px solid rgba(212, 160, 23, 0.42);
+        border-radius: var(--radius);
+        background: rgba(13, 31, 51, 0.64);
+        text-align: center;
+      }
+
+      .count-box strong {
+        display: block;
+        color: var(--color-accent);
+        font-size: clamp(2rem, 8vw, 3.2rem);
+        line-height: 1;
+      }
+
+      .count-box span {
+        color: rgba(255, 255, 255, 0.78);
+        font-size: 0.78rem;
+        font-weight: 900;
+        text-transform: uppercase;
+      }
+
+      .why-grid,
+      .paths-grid {
+        display: grid;
+        gap: 18px;
+      }
+
+      .info-card,
+      .path-card,
+      .speaker-card,
+      .pricing-card,
+      .form-card,
+      .faq-item,
+      .testimonial-card {
+        border-radius: var(--radius);
+        background: var(--color-surface);
+        box-shadow: var(--shadow-card);
+      }
+
+      .info-card {
+        padding: 26px;
+        border: 1px solid rgba(26, 58, 92, 0.08);
+      }
+
+      .info-icon {
+        display: block;
+        margin-bottom: 14px;
+        font-size: 2rem;
+      }
+
+      .info-card h3,
+      .path-card h3 {
+        margin: 0;
+        color: var(--color-primary);
+        font-size: 1.12rem;
+      }
+
+      .info-card p,
+      .path-card p {
+        margin: 8px 0 0;
+        color: var(--color-muted);
+      }
+
+      .speakers-grid {
+        display: grid;
+        gap: 24px;
+      }
+
+      .speaker-card {
+        padding: 32px;
+        text-align: center;
+      }
+
+      .speaker-photo {
+        width: 160px;
+        height: 160px;
+        margin: 0 auto 22px;
+        border: 6px solid var(--color-accent);
+        box-shadow: 0 16px 34px rgba(26, 58, 92, 0.18);
+      }
+
+      .speaker-card h3 {
+        margin: 0;
+        color: var(--color-primary);
+        font-family: var(--font-display);
+        font-size: 2rem;
+      }
+
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        min-height: 30px;
+        margin-top: 12px;
+        padding: 0 12px;
+        border-radius: var(--radius-pill);
+        background: rgba(212, 160, 23, 0.14);
+        color: var(--color-primary);
+        font-size: 0.82rem;
+        font-weight: 900;
+      }
+
+      .muted-line {
+        margin: 12px 0 0;
+        color: var(--color-muted);
+        font-weight: 700;
+      }
+
+      .speaker-card p:not(.muted-line) {
+        margin: 18px 0 0;
+        color: #374151;
+      }
+
+      .social-link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 42px;
+        height: 42px;
+        margin-top: 18px;
+        border-radius: 50%;
+        background: var(--color-primary);
+        color: #ffffff;
+        font-weight: 900;
+      }
+
+      .path-card {
+        position: relative;
+        min-height: 172px;
+        padding: 26px 22px 24px;
+        border-left: 4px solid transparent;
+        transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+      }
+
+      .path-card:hover {
+        border-left-color: var(--color-accent);
+        box-shadow: var(--shadow-soft);
+        transform: translateY(-6px);
+      }
+
+      .path-number {
+        display: grid;
+        place-items: center;
+        width: 38px;
+        height: 38px;
+        margin-bottom: 18px;
+        border-radius: 50%;
+        background: var(--color-accent);
+        color: var(--color-primary);
+        font-weight: 900;
+      }
+
+      .agenda {
+        background: #ffffff;
+      }
+
+      .tabs {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+        margin-bottom: 36px;
+      }
+
+      .tab-btn {
+        min-height: 48px;
+        padding: 0 16px;
+        border: 0;
+        border-bottom: 3px solid transparent;
+        background: transparent;
+        color: var(--color-primary);
+        cursor: pointer;
+        font-weight: 900;
+      }
+
+      .tab-btn.active {
+        border-bottom-color: var(--color-accent);
+        color: var(--color-cta);
+      }
+
+      .timeline {
+        display: none;
+        max-width: 850px;
+        margin: 0 auto;
+      }
+
+      .timeline.active {
+        display: block;
+      }
+
+      .timeline-item {
+        position: relative;
+        display: grid;
+        grid-template-columns: 120px 1fr;
+        gap: 24px;
+        padding: 0 0 28px;
+      }
+
+      .timeline-item::before {
+        position: absolute;
+        top: 12px;
+        bottom: -12px;
+        left: 134px;
+        width: 2px;
+        background: rgba(212, 160, 23, 0.36);
+        content: "";
+      }
+
+      .timeline-item:last-child::before {
+        display: none;
+      }
+
+      .timeline-time {
+        color: var(--color-primary);
+        font-size: 0.92rem;
+        font-weight: 900;
+        text-align: right;
+      }
+
+      .timeline-content {
+        position: relative;
+        padding-left: 26px;
+        color: #374151;
+        font-weight: 700;
+      }
+
+      .timeline-content::before {
+        position: absolute;
+        top: 7px;
+        left: -1px;
+        width: 14px;
+        height: 14px;
+        border: 3px solid #ffffff;
+        border-radius: 50%;
+        background: var(--color-accent);
+        box-shadow: 0 0 0 2px rgba(212, 160, 23, 0.3);
+        content: "";
+      }
+
+      .pricing-grid {
+        display: grid;
+        max-width: 900px;
+        margin: 0 auto;
+        gap: 22px;
+      }
+
+      .pricing-card {
+        position: relative;
+        padding: 32px;
+        border: 1px solid rgba(26, 58, 92, 0.08);
+      }
+
+      .pricing-card.featured {
+        border: 2px solid var(--color-accent);
+        transform: none;
+      }
+
+      .price-chip {
+        display: inline-flex;
+        margin-bottom: 18px;
+        padding: 6px 12px;
+        border-radius: var(--radius-pill);
+        background: rgba(26, 58, 92, 0.08);
+        color: var(--color-primary);
+        font-size: 0.78rem;
+        font-weight: 900;
+      }
+
+      .featured .price-chip {
+        background: var(--color-accent);
+      }
+
+      .pricing-card h3 {
+        margin: 0;
+        color: var(--color-primary);
+        font-family: var(--font-display);
+        font-size: 2rem;
+      }
+
+      .price {
+        margin: 8px 0 20px;
+        color: var(--color-cta);
+        font-size: 2.6rem;
+        font-weight: 900;
+      }
+
+      .features {
+        display: grid;
+        gap: 10px;
+        margin: 0 0 28px;
+        padding: 0;
+        list-style: none;
+      }
+
+      .features li {
+        color: #374151;
+        font-weight: 700;
+      }
+
+      .features .no {
+        color: var(--color-muted);
+      }
+
+      .registration {
+        background:
+          linear-gradient(rgba(249, 247, 244, 0.93), rgba(249, 247, 244, 0.93)),
+          radial-gradient(circle at 15% 20%, rgba(212, 160, 23, 0.28), transparent 25%);
+      }
+
+      .form-card {
+        max-width: 820px;
+        margin: 0 auto;
+        padding: 26px;
+        border-left: 7px solid var(--color-primary);
+      }
+
+      .form-grid {
+        display: grid;
+        gap: 18px;
+      }
+
+      .field {
+        display: grid;
+        gap: 8px;
+      }
+
+      .field label,
+      .radio-group legend {
+        color: var(--color-primary);
+        font-weight: 900;
+      }
+
+      .field input,
+      .field select {
+        width: 100%;
+        min-height: 48px;
+        border: 1px solid #d1d5db;
+        border-radius: var(--radius);
+        background: #ffffff;
+        color: var(--color-text);
+        padding: 0 14px;
+      }
+
+      .phone-row {
+        display: grid;
+        grid-template-columns: 94px 1fr;
+        gap: 10px;
+      }
+
+      .radio-group {
+        display: grid;
+        gap: 12px;
+        margin: 0;
+        padding: 0;
+        border: 0;
+      }
+
+      .radio-options {
+        display: grid;
+        gap: 10px;
+      }
+
+      .radio-option {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        min-height: 50px;
+        padding: 12px;
+        border: 1px solid #d1d5db;
+        border-radius: var(--radius);
+        cursor: pointer;
+        font-weight: 800;
+      }
+
+      .radio-option:has(input:checked) {
+        border-color: var(--color-accent);
+        background: rgba(212, 160, 23, 0.12);
+      }
+
+      .field.error input,
+      .field.error select,
+      .radio-group.error .radio-option {
+        border-color: var(--color-cta);
+      }
+
+      .error-message {
+        display: none;
+        color: var(--color-cta);
+        font-size: 0.84rem;
+        font-weight: 800;
+      }
+
+      .field.error .error-message,
+      .radio-group.error .error-message {
+        display: block;
+      }
+
+      .form-note {
+        margin: 22px 0 0;
+        color: var(--color-muted);
+        text-align: center;
+      }
+
+      .faq-list {
+        display: grid;
+        max-width: 920px;
+        margin: 0 auto;
+        gap: 12px;
+      }
+
+      .faq-item {
+        overflow: hidden;
+        border: 1px solid rgba(26, 58, 92, 0.08);
+      }
+
+      .faq-question {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        min-height: 64px;
+        padding: 0 22px;
+        border: 0;
+        background: #ffffff;
+        color: var(--color-primary);
+        cursor: pointer;
+        font-weight: 900;
+        text-align: left;
+      }
+
+      .faq-question span:last-child {
+        color: var(--color-accent);
+        font-size: 1.5rem;
+        line-height: 1;
+      }
+
+      .faq-answer {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 240ms ease;
+      }
+
+      .faq-answer p {
+        margin: 0;
+        padding: 0 22px 22px;
+        color: var(--color-muted);
+      }
+
+      .testimonials {
+        background: #ffffff;
+      }
+
+      .testimonial-track {
+        display: grid;
+        grid-auto-columns: minmax(280px, 1fr);
+        grid-auto-flow: column;
+        gap: 18px;
+        overflow-x: auto;
+        padding: 8px 4px 24px;
+        scroll-snap-type: x mandatory;
+      }
+
+      .testimonial-card {
+        min-width: 280px;
+        padding: 24px;
+        scroll-snap-align: start;
+      }
+
+      .avatar {
+        display: grid;
+        place-items: center;
+        width: 58px;
+        height: 58px;
+        margin-bottom: 16px;
+        border-radius: 50%;
+        background: var(--color-primary);
+        color: var(--color-accent);
+        font-weight: 900;
+      }
+
+      .testimonial-card h3 {
+        margin: 0;
+        color: var(--color-primary);
+      }
+
+      .testimonial-card p {
+        margin: 10px 0 0;
+        color: #374151;
+      }
+
+      .testimonial-card blockquote {
+        margin: 16px 0 0;
+        color: var(--color-muted);
+        font-style: italic;
+      }
+
+      .partners {
+        display: none;
+        padding: 38px 0;
+        background: rgba(26, 58, 92, 0.05);
+      }
+
+      .partners.visible {
+        display: block;
+      }
+
+      .partner-row {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 18px;
+      }
+
+      .partner-row strong {
+        color: var(--color-primary);
+      }
+
+      .partner-logo {
+        width: 180px;
+        height: 72px;
+        border: 1px dashed #cbd5e1;
+        border-radius: var(--radius);
+        background: #e5e7eb;
+      }
+
+      .footer {
+        background: var(--color-footer);
+        color: #ffffff;
+      }
+
+      .footer-grid {
+        display: grid;
+        gap: 32px;
+        padding: 58px 0;
+      }
+
+      .footer h3 {
+        margin: 0 0 14px;
+        color: var(--color-accent);
+        font-family: var(--font-display);
+        font-size: 1.45rem;
+      }
+
+      .footer p,
+      .footer a {
+        color: rgba(255, 255, 255, 0.78);
+      }
+
+      .footer-links,
+      .contact-list,
+      .socials {
+        display: grid;
+        gap: 10px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .socials {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 16px;
+      }
+
+      .socials a {
+        display: grid;
+        place-items: center;
+        min-width: 42px;
+        height: 42px;
+        padding: 0 10px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        border-radius: var(--radius-pill);
+        font-weight: 900;
+      }
+
+      .footer-bottom {
+        padding: 18px 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.12);
+        color: rgba(255, 255, 255, 0.64);
+        text-align: center;
+      }
+
+      .whatsapp-float {
+        position: fixed;
+        right: 18px;
+        bottom: 18px;
+        z-index: 60;
+        display: grid;
+        place-items: center;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: #25d366;
+        color: #ffffff;
+        box-shadow: 0 12px 28px rgba(18, 140, 74, 0.36);
+        font-size: 1.9rem;
+        animation: pulse 1.9s infinite;
+      }
+
+      .mobile-register-bar {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 55;
+        display: none;
+        min-height: 54px;
+        align-items: center;
+        justify-content: center;
+        background: var(--color-cta);
+        color: #ffffff;
+        font-weight: 900;
+        box-shadow: 0 -10px 24px rgba(13, 31, 51, 0.18);
+        transform: translateY(110%);
+        transition: transform 180ms ease;
+      }
+
+      .mobile-register-bar.visible {
+        transform: translateY(0);
+      }
+
+      .modal {
+        position: fixed;
+        inset: 0;
+        z-index: 80;
+        display: none;
+        place-items: center;
+        padding: 20px;
+        background: rgba(13, 31, 51, 0.72);
+      }
+
+      .modal.show {
+        display: grid;
+      }
+
+      .modal-card {
+        width: min(100%, 520px);
+        padding: 32px;
+        border-radius: var(--radius);
+        background: #ffffff;
+        box-shadow: var(--shadow-soft);
+        text-align: center;
+      }
+
+      .modal-card h2 {
+        margin: 0;
+        color: var(--color-primary);
+        font-family: var(--font-display);
+        font-size: 2.4rem;
+      }
+
+      .modal-card p {
+        color: var(--color-muted);
+      }
+
+      .modal-actions {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+        margin-top: 22px;
+      }
+
+      @keyframes pulse {
+        0% {
+          box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.46), 0 12px 28px rgba(18, 140, 74, 0.36);
+        }
+        70% {
+          box-shadow: 0 0 0 16px rgba(37, 211, 102, 0), 0 12px 28px rgba(18, 140, 74, 0.36);
+        }
+        100% {
+          box-shadow: 0 0 0 0 rgba(37, 211, 102, 0), 0 12px 28px rgba(18, 140, 74, 0.36);
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          scroll-behavior: auto !important;
+          transition-duration: 0.01ms !important;
+        }
+      }
+
+      @media (min-width: 640px) {
+        .countdown {
+          grid-template-columns: repeat(4, minmax(0, 1fr));
+        }
+
+        .why-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .paths-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .form-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .field.full,
+        .radio-group,
+        .submit-row {
+          grid-column: 1 / -1;
+        }
+      }
+
+      @media (min-width: 860px) {
+        .nav-links,
+        .nav-cta {
+          display: inline-flex;
+        }
+
+        .hero-grid {
+          grid-template-columns: minmax(0, 3fr) minmax(280px, 2fr);
+        }
+
+        .why-grid {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
+        .speakers-grid,
+        .pricing-grid,
+        .footer-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .paths-grid {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
+        .pricing-card.featured {
+          transform: scale(1.035);
+        }
+      }
+
+      @media (min-width: 1100px) {
+        .paths-grid {
+          grid-template-columns: repeat(4, minmax(0, 1fr));
+        }
+
+        .footer-grid {
+          grid-template-columns: 1.35fr 0.8fr 1fr;
+        }
+      }
+
+      @media (max-width: 859px) {
+        .site-header {
+          min-height: 66px;
+        }
+
+        .brand span {
+          font-size: 0.92rem;
+        }
+
+        .hero {
+          padding-top: 100px;
+        }
+
+        .mobile-register-bar {
+          display: flex;
+        }
+
+        .whatsapp-float {
+          bottom: 72px;
+        }
+      }
+
+      @media (max-width: 560px) {
+        .hero-actions .btn,
+        .pricing-card .btn {
+          width: 100%;
+        }
+
+        .timeline-item {
+          grid-template-columns: 1fr;
+          gap: 8px;
+          padding-left: 20px;
+        }
+
+        .timeline-item::before {
+          left: 5px;
+        }
+
+        .timeline-time {
+          text-align: left;
+        }
+
+        .timeline-content {
+          padding-left: 22px;
+        }
+
+        .timeline-content::before {
+          left: -21px;
+        }
+
+        .phone-row {
+          grid-template-columns: 84px 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header" id="siteHeader">
+      <nav class="nav container" aria-label="Primary navigation">
+        <a class="brand" href="#home" aria-label="IMA Parippally home">
+          <span class="logo-slot image-check">
+            <img src="images/ima-logo.png" alt="IMA Parippally official logo, 96 by 96 pixels" />
+            <span class="image-fallback">IMA</span>
+          </span>
+          <span>IMA Parippally</span>
+        </a>
+        <div class="nav-links">
+          <a href="#home">Home</a>
+          <a href="#speakers">Speakers</a>
+          <a href="#career-paths">Career Paths</a>
+          <a href="#agenda">Agenda</a>
+          <a href="#register">Register</a>
+        </div>
+        <a class="btn btn-cta nav-cta" href="#register">Register Now</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="container hero-grid">
+          <div>
+            <p class="eyebrow">IMA Parippally Presents · Online Conclave 2025</p>
+            <h1>After MBBS?</h1>
+            <h2>Exploring Hidden Treasures</h2>
+            <p class="tagline">Exploring Global and Emerging Career Opportunities</p>
+            <div class="meta-pills" aria-label="Event details">
+              <span class="meta-pill">📅 September 11, 12 &amp; 13</span>
+              <span class="meta-pill">🕕 6:00 PM - 9:00 PM IST</span>
+              <span class="meta-pill">💻 Live on Zoom</span>
+              <span class="meta-pill">⏱ 3 Hours/Day</span>
+            </div>
+            <div class="hero-actions">
+              <a class="btn btn-cta" href="#register">Register Now - ₹249 onwards</a>
+              <a class="btn btn-outline" href="https://wa.me/917736303032" target="_blank" rel="noopener">WhatsApp Us</a>
+            </div>
+          </div>
+          <div class="hero-poster-wrap media-slot round image-check">
+            <img src="images/event-poster.jpg" alt="After MBBS webinar event poster, circular display, recommended 800 by 800 pixels" />
+            <span class="image-fallback">Upload event-poster.jpg<br />800 x 800 px</span>
+          </div>
+        </div>
+        <div class="container countdown-wrap" aria-label="Countdown to September 11, 2025, 6 PM IST">
+          <div class="countdown">
+            <div class="count-box"><strong id="days">00</strong><span>Days</span></div>
+            <div class="count-box"><strong id="hours">00</strong><span>Hours</span></div>
+            <div class="count-box"><strong id="minutes">00</strong><span>Minutes</span></div>
+            <div class="count-box"><strong id="seconds">00</strong><span>Seconds</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-pad" id="why-attend">
+        <div class="container">
+          <div class="section-heading">
+            <h2>Why This Conclave?</h2>
+            <p>Answers you've been searching for - from doctors who've lived it.</p>
+          </div>
+          <div class="why-grid">
+            <article class="info-card"><span class="info-icon">🌍</span><h3>Global Perspectives</h3><p>Hear from doctors working in GCC &amp; abroad</p></article>
+            <article class="info-card"><span class="info-icon">🔬</span><h3>11 Career Paths</h3><p>From clinical to entrepreneur, all mapped out</p></article>
+            <article class="info-card"><span class="info-icon">🎙</span><h3>Live Q&amp;A</h3><p>Ask your questions directly to experts</p></article>
+            <article class="info-card"><span class="info-icon">📜</span><h3>Networking</h3><p>Connect with peers &amp; mentors</p></article>
+            <article class="info-card"><span class="info-icon">💡</span><h3>Actionable Insights</h3><p>Walk away with a clear next step</p></article>
+            <article class="info-card"><span class="info-icon">🏥</span><h3>IMA Backed</h3><p>Credibility you can trust</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-pad" id="speakers">
+        <div class="container">
+          <div class="section-heading">
+            <h2>Your Guides for the Journey</h2>
+          </div>
+          <div class="speakers-grid">
+            <article class="speaker-card">
+              <div class="speaker-photo media-slot round image-check">
+                <img src="images/doctor1.jpg" alt="Speaker 1 professional doctor portrait, recommended 400 by 400 pixels" />
+                <span class="image-fallback">Upload doctor1.jpg<br />400 x 400 px</span>
+              </div>
+              <h3>[DR. FULL NAME]</h3>
+              <span class="badge">[Current Position]</span>
+              <p class="muted-line">[UAE / Qatar / Saudi Arabia]</p>
+              <p>[Short professional bio - upload with photos] A GCC experienced doctor will share practical routes, licensing realities, and how to make informed international career decisions after MBBS.</p>
+              <a class="social-link" href="#" aria-label="Speaker 1 LinkedIn profile">in</a>
+            </article>
+            <article class="speaker-card">
+              <div class="speaker-photo media-slot round image-check">
+                <img src="images/doctor2.jpg" alt="Speaker 2 professional doctor portrait, recommended 400 by 400 pixels" />
+                <span class="image-fallback">Upload doctor2.jpg<br />400 x 400 px</span>
+              </div>
+              <h3>[DR. FULL NAME]</h3>
+              <span class="badge">[Current Position]</span>
+              <p class="muted-line">[Hospital or Organization name]</p>
+              <p>[Short professional bio - upload with photos] A Kerala doctor and startup expert will unpack innovation, healthcare entrepreneurship, and new-age medical roles with grounded local context.</p>
+              <a class="social-link" href="#" aria-label="Speaker 2 LinkedIn profile">in</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-pad" id="career-paths">
+        <div class="container">
+          <div class="section-heading">
+            <h2>11 Doors. Which One Opens for You?</h2>
+          </div>
+          <div class="paths-grid">
+            <article class="path-card"><span class="path-number">1</span><h3>Clinical Practice</h3><p>MBBS enough to excel and earn?</p></article>
+            <article class="path-card"><span class="path-number">2</span><h3>MD/MS Specialization</h3><p>What's new?</p></article>
+            <article class="path-card"><span class="path-number">3</span><h3>DNB Programs</h3><p>What to expect?</p></article>
+            <article class="path-card"><span class="path-number">4</span><h3>GCC Medical Careers</h3><p>Evergreen?</p></article>
+            <article class="path-card"><span class="path-number">5</span><h3>Europe</h3><p>UK, Canada, Australia, NZ - sun setting?</p></article>
+            <article class="path-card"><span class="path-number">6</span><h3>USA</h3><p>Still difficult?</p></article>
+            <article class="path-card"><span class="path-number">7</span><h3>Hospital Administration</h3><p>Do we have a role?</p></article>
+            <article class="path-card"><span class="path-number">8</span><h3>Healthcare Entrepreneurship &amp; Innovation</h3><p>Are we blind?</p></article>
+            <article class="path-card"><span class="path-number">9</span><h3>Medical Research</h3><p>Designing the future?</p></article>
+            <article class="path-card"><span class="path-number">10</span><h3>Telemedicine &amp; Digital Health</h3><p>The next frontier?</p></article>
+            <article class="path-card"><span class="path-number">11</span><h3>How to Find Your Passion</h3><p>The question nobody asks?</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-pad agenda" id="agenda">
+        <div class="container">
+          <div class="section-heading">
+            <h2>3 Days. 3 Revelations.</h2>
+          </div>
+          <div class="tabs" role="tablist" aria-label="Event agenda days">
+            <button class="tab-btn active" type="button" role="tab" aria-selected="true" data-tab="day1">Day 1 - Sept 11</button>
+            <button class="tab-btn" type="button" role="tab" aria-selected="false" data-tab="day2">Day 2 - Sept 12</button>
+            <button class="tab-btn" type="button" role="tab" aria-selected="false" data-tab="day3">Day 3 - Sept 13</button>
+          </div>
+          <div class="timeline active" id="day1" role="tabpanel">
+            <div class="timeline-item"><div class="timeline-time">6:00 PM</div><div class="timeline-content">Welcome &amp; Introduction</div></div>
+            <div class="timeline-item"><div class="timeline-time">6:15 PM</div><div class="timeline-content">Session 1: Clinical Practice, MD/MS Specialization &amp; DNB Programs</div></div>
+            <div class="timeline-item"><div class="timeline-time">7:15 PM</div><div class="timeline-content">Session 2: Building a practical PG decision framework</div></div>
+            <div class="timeline-item"><div class="timeline-time">8:15 PM</div><div class="timeline-content">Live Q&amp;A with Speakers</div></div>
+            <div class="timeline-item"><div class="timeline-time">8:45 PM</div><div class="timeline-content">Open Discussion &amp; Networking</div></div>
+            <div class="timeline-item"><div class="timeline-time">9:00 PM</div><div class="timeline-content">Closing Remarks</div></div>
+          </div>
+          <div class="timeline" id="day2" role="tabpanel">
+            <div class="timeline-item"><div class="timeline-time">6:00 PM</div><div class="timeline-content">Welcome &amp; Introduction</div></div>
+            <div class="timeline-item"><div class="timeline-time">6:15 PM</div><div class="timeline-content">Session 1: GCC, Europe and USA medical career routes</div></div>
+            <div class="timeline-item"><div class="timeline-time">7:15 PM</div><div class="timeline-content">Session 2: Exams, licensing, migration decisions and first jobs abroad</div></div>
+            <div class="timeline-item"><div class="timeline-time">8:15 PM</div><div class="timeline-content">Live Q&amp;A with Speakers</div></div>
+            <div class="timeline-item"><div class="timeline-time">8:45 PM</div><div class="timeline-content">Open Discussion &amp; Networking</div></div>
+            <div class="timeline-item"><div class="timeline-time">9:00 PM</div><div class="timeline-content">Closing Remarks</div></div>
+          </div>
+          <div class="timeline" id="day3" role="tabpanel">
+            <div class="timeline-item"><div class="timeline-time">6:00 PM</div><div class="timeline-content">Welcome &amp; Introduction</div></div>
+            <div class="timeline-item"><div class="timeline-time">6:15 PM</div><div class="timeline-content">Session 1: Administration, research, entrepreneurship and digital health</div></div>
+            <div class="timeline-item"><div class="timeline-time">7:15 PM</div><div class="timeline-content">Session 2: How to find your passion and choose your next step</div></div>
+            <div class="timeline-item"><div class="timeline-time">8:15 PM</div><div class="timeline-content">Live Q&amp;A with Speakers</div></div>
+            <div class="timeline-item"><div class="timeline-time">8:45 PM</div><div class="timeline-content">Open Discussion &amp; Networking</div></div>
+            <div class="timeline-item"><div class="timeline-time">9:00 PM</div><div class="timeline-content">Closing Remarks</div></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-pad" id="pricing">
+        <div class="container">
+          <div class="section-heading">
+            <h2>Choose Your Pass</h2>
+          </div>
+          <div class="pricing-grid">
+            <article class="pricing-card">
+              <span class="price-chip">Best Value</span>
+              <h3>Viewer Pass</h3>
+              <div class="price">₹249</div>
+              <ul class="features">
+                <li>✅ Live webinar access (all 3 days)</li>
+                <li>✅ Access to presentation slides</li>
+                <li>✅ WhatsApp community support for 1 year</li>
+                <li class="no">❌ Live Q&amp;A participation</li>
+                <li class="no">❌ Certificate</li>
+              </ul>
+              <button class="btn btn-cta pass-select" type="button" data-pass="viewer">Register as Viewer</button>
+            </article>
+            <article class="pricing-card featured">
+              <span class="price-chip">Most Popular</span>
+              <h3>Interactive Pass</h3>
+              <div class="price">₹449</div>
+              <ul class="features">
+                <li>✅ Live webinar access (all 3 days)</li>
+                <li>✅ Access to presentation slides</li>
+                <li>✅ WhatsApp community support for 1 year</li>
+                <li>✅ Ask up to 10 live questions</li>
+                <li>✅ Join exclusive doctor discussion session</li>
+                <li>✅ Priority networking access</li>
+                <li class="no">❌ Certificate</li>
+              </ul>
+              <button class="btn btn-cta pass-select" type="button" data-pass="interactive">Register as Interactive</button>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-pad registration" id="register">
+        <div class="container">
+          <div class="section-heading">
+            <h2>Secure Your Spot Today</h2>
+            <p>Limited seats. Don't miss out.</p>
+          </div>
+          <form class="form-card" id="registrationForm" novalidate>
+            <div class="form-grid">
+              <div class="field" data-required>
+                <label for="fullName">Full Name *</label>
+                <input id="fullName" name="fullName" type="text" autocomplete="name" required />
+                <span class="error-message">Full name is required.</span>
+              </div>
+              <div class="field" data-required>
+                <label for="email">Email Address *</label>
+                <input id="email" name="email" type="email" autocomplete="email" required />
+                <span class="error-message">A valid email address is required.</span>
+              </div>
+              <div class="field" data-required>
+                <label for="phone">Phone Number *</label>
+                <div class="phone-row">
+                  <select id="countryCode" name="countryCode" aria-label="Country code">
+                    <option value="+91">+91</option>
+                  </select>
+                  <input id="phone" name="phone" type="tel" autocomplete="tel" required />
+                </div>
+                <span class="error-message">Phone number is required.</span>
+              </div>
+              <div class="field">
+                <label for="institution">Medical College / Institution</label>
+                <input id="institution" name="institution" type="text" />
+              </div>
+              <div class="field">
+                <label for="graduation">Year of Graduation</label>
+                <select id="graduation" name="graduation">
+                  <option value="">Select year/status</option>
+                  <option>2019</option><option>2020</option><option>2021</option><option>2022</option><option>2023</option><option>2024</option><option>2025</option>
+                  <option>Intern</option><option>Recently Graduated</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="status">Current Status</label>
+                <select id="status" name="status">
+                  <option value="">Select status</option>
+                  <option>Intern</option><option>Houseman</option><option>Preparing for PG</option><option>Working abroad</option><option>Other</option>
+                </select>
+              </div>
+              <fieldset class="radio-group" data-required>
+                <legend>Pass Type *</legend>
+                <div class="radio-options">
+                  <label class="radio-option"><input type="radio" name="passType" value="viewer" required /> Viewer Pass - ₹249</label>
+                  <label class="radio-option"><input type="radio" name="passType" value="interactive" required /> Interactive Pass - ₹449</label>
+                </div>
+                <span class="error-message">Please select a pass type.</span>
+              </fieldset>
+              <div class="field full">
+                <label for="source">How did you hear about this?</label>
+                <select id="source" name="source">
+                  <option value="">Select source</option>
+                  <option>IMA</option><option>WhatsApp</option><option>Instagram</option><option>Friend</option><option>Other</option>
+                </select>
+              </div>
+              <div class="submit-row">
+                <button class="btn btn-cta" type="submit" style="width: 100%;">Register &amp; Proceed to Payment</button>
+              </div>
+            </div>
+            <p class="form-note">After registration, payment details will be sent via WhatsApp and email. For queries: imaparippally@gmail.com | +918281980653</p>
+          </form>
+        </div>
+      </section>
+
+      <section class="section-pad" id="faq">
+        <div class="container">
+          <div class="section-heading">
+            <h2>Frequently Asked Questions</h2>
+          </div>
+          <div class="faq-list">
+            <article class="faq-item"><button class="faq-question" type="button"><span>Who is this conclave for?</span><span>+</span></button><div class="faq-answer"><p>Final year MBBS students, interns, and recently graduated doctors exploring career options.</p></div></article>
+            <article class="faq-item"><button class="faq-question" type="button"><span>Will I get a recording after the event?</span><span>+</span></button><div class="faq-answer"><p>Presentation slides will be shared. Viewer Pass holders get access to slides; recording availability will be announced.</p></div></article>
+            <article class="faq-item"><button class="faq-question" type="button"><span>How do I join the Zoom session?</span><span>+</span></button><div class="faq-answer"><p>Zoom link will be sent to your registered email after payment confirmation.</p></div></article>
+            <article class="faq-item"><button class="faq-question" type="button"><span>What is the WhatsApp community?</span><span>+</span></button><div class="faq-answer"><p>An exclusive peer and mentor support group valid for 1 year, available for both pass types.</p></div></article>
+            <article class="faq-item"><button class="faq-question" type="button"><span>Can I get a refund?</span><span>+</span></button><div class="faq-answer"><p>Registrations are non-refundable. Please contact us for rescheduling.</p></div></article>
+            <article class="faq-item"><button class="faq-question" type="button"><span>Is the Interactive Pass worth it?</span><span>+</span></button><div class="faq-answer"><p>If you want to ask doctors your specific questions live and join the private discussion session, yes - absolutely.</p></div></article>
+            <article class="faq-item"><button class="faq-question" type="button"><span>How will I pay?</span><span>+</span></button><div class="faq-answer"><p>Payment instructions (UPI/bank transfer) are sent via WhatsApp after form submission.</p></div></article>
+            <article class="faq-item"><button class="faq-question" type="button"><span>Is there a certificate?</span><span>+</span></button><div class="faq-answer"><p>No certificate is provided for either pass at this time.</p></div></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-pad testimonials" id="testimonials">
+        <div class="container">
+          <div class="section-heading">
+            <h2>What Doctors Say</h2>
+          </div>
+          <div class="testimonial-track" aria-label="Testimonials carousel">
+            <article class="testimonial-card"><div class="avatar">AR</div><h3>Dr. Anjali R.</h3><p>Batch 2024</p><blockquote>"I felt lost after MBBS; structured guidance like this would have saved months of confusion."</blockquote></article>
+            <article class="testimonial-card"><div class="avatar">VN</div><h3>Dr. Vishnu N.</h3><p>Batch 2023</p><blockquote>"Hearing from doctors who have actually walked these routes makes every option feel clearer."</blockquote></article>
+            <article class="testimonial-card"><div class="avatar">SM</div><h3>Dr. Sara M.</h3><p>Batch 2025</p><blockquote>"Career choices after MBBS need honest conversations, practical maps, and mentors who understand our doubts."</blockquote></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="partners" id="partners" aria-label="Sponsors and partners">
+        <div class="container partner-row">
+          <strong>Supported By</strong>
+          <div class="partner-logo media-slot image-check">
+            <img src="images/partner-logo-1.png" alt="Partner or sponsor logo, recommended 360 by 144 pixels" />
+            <span class="image-fallback">Upload partner-logo-1.png<br />360 x 144 px</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div>
+          <a class="brand" href="#home">
+            <span class="logo-slot image-check">
+              <img src="images/ima-logo.png" alt="IMA Parippally official logo, footer display, 96 by 96 pixels" />
+              <span class="image-fallback">IMA</span>
+            </span>
+            <span>IMA Parippally</span>
+          </a>
+          <p>IMA Parippally Branch · Empowering Doctors Across Kerala</p>
+        </div>
+        <div>
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#speakers">Speakers</a></li>
+            <li><a href="#career-paths">Career Paths</a></li>
+            <li><a href="#register">Register</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Contact</h3>
+          <ul class="contact-list">
+            <li>📧 <a href="mailto:imaparippally@gmail.com">imaparippally@gmail.com</a></li>
+            <li>📞 <a href="tel:+918281980653">+91 82819 80653</a></li>
+            <li>💬 <a href="https://wa.me/917736303032" target="_blank" rel="noopener">WhatsApp: +91 77363 03032</a></li>
+          </ul>
+          <div class="socials" aria-label="Social links">
+            <a href="#" aria-label="Facebook">Facebook</a>
+            <a href="#" aria-label="Instagram">Instagram</a>
+            <a href="#" aria-label="LinkedIn">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">© 2025 IMA Parippally Branch. All rights reserved.</div>
+    </footer>
+
+    <a class="whatsapp-float" href="https://wa.me/917736303032" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">💬</a>
+    <a class="mobile-register-bar" id="mobileRegisterBar" href="#register">Seats Filling Fast - Register Now ₹249</a>
+
+    <div class="modal" id="thankYouModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="modal-card">
+        <h2 id="modalTitle">Thank You</h2>
+        <p>Your registration details are noted. Payment instructions will be sent through WhatsApp and email after review.</p>
+        <div class="modal-actions">
+          <a class="btn btn-cta" href="https://wa.me/917736303032" target="_blank" rel="noopener">Continue on WhatsApp</a>
+          <button class="btn btn-outline" type="button" id="closeModal">Close</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const header = document.getElementById("siteHeader");
+      const mobileRegisterBar = document.getElementById("mobileRegisterBar");
+      const hero = document.getElementById("home");
+      const countdownTarget = new Date("2025-09-11T18:00:00+05:30").getTime();
+
+      function updateHeaderState() {
+        const pastHero = window.scrollY > hero.offsetHeight - 120;
+        header.classList.toggle("scrolled", window.scrollY > 16);
+        mobileRegisterBar.classList.toggle("visible", pastHero);
+      }
+
+      function pad(value) {
+        return String(value).padStart(2, "0");
+      }
+
+      function updateCountdown() {
+        const remaining = Math.max(0, countdownTarget - Date.now());
+        const days = Math.floor(remaining / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((remaining / (1000 * 60 * 60)) % 24);
+        const minutes = Math.floor((remaining / (1000 * 60)) % 60);
+        const seconds = Math.floor((remaining / 1000) % 60);
+
+        document.getElementById("days").textContent = pad(days);
+        document.getElementById("hours").textContent = pad(hours);
+        document.getElementById("minutes").textContent = pad(minutes);
+        document.getElementById("seconds").textContent = pad(seconds);
+      }
+
+      document.querySelectorAll(".image-check").forEach((slot) => {
+        const image = slot.querySelector("img");
+        if (!image) return;
+        image.addEventListener("load", () => {
+          slot.classList.add("image-loaded");
+          const partnerSection = slot.closest(".partners");
+          if (partnerSection) partnerSection.classList.add("visible");
+        });
+        image.addEventListener("error", () => {
+          image.style.display = "none";
+          slot.classList.remove("image-loaded");
+        });
+        if (image.complete && image.naturalWidth > 0) {
+          slot.classList.add("image-loaded");
+          const partnerSection = slot.closest(".partners");
+          if (partnerSection) partnerSection.classList.add("visible");
+        }
+      });
+
+      document.querySelectorAll(".tab-btn").forEach((button) => {
+        button.addEventListener("click", () => {
+          document.querySelectorAll(".tab-btn").forEach((tab) => {
+            tab.classList.remove("active");
+            tab.setAttribute("aria-selected", "false");
+          });
+          document.querySelectorAll(".timeline").forEach((timeline) => timeline.classList.remove("active"));
+          button.classList.add("active");
+          button.setAttribute("aria-selected", "true");
+          document.getElementById(button.dataset.tab).classList.add("active");
+        });
+      });
+
+      document.querySelectorAll(".faq-question").forEach((button) => {
+        button.addEventListener("click", () => {
+          const item = button.closest(".faq-item");
+          const answer = item.querySelector(".faq-answer");
+          const icon = button.querySelector("span:last-child");
+          const isOpen = item.classList.toggle("open");
+          answer.style.maxHeight = isOpen ? `${answer.scrollHeight}px` : "0px";
+          icon.textContent = isOpen ? "−" : "+";
+        });
+      });
+
+      document.querySelectorAll(".pass-select").forEach((button) => {
+        button.addEventListener("click", () => {
+          const selected = document.querySelector(`input[name="passType"][value="${button.dataset.pass}"]`);
+          if (selected) selected.checked = true;
+          document.getElementById("register").scrollIntoView({ behavior: "smooth", block: "start" });
+        });
+      });
+
+      const form = document.getElementById("registrationForm");
+      const modal = document.getElementById("thankYouModal");
+      const closeModal = document.getElementById("closeModal");
+
+      function validateForm() {
+        let valid = true;
+        form.querySelectorAll(".field[data-required]").forEach((field) => {
+          const input = field.querySelector("input, select");
+          const fieldValid = input.checkValidity();
+          field.classList.toggle("error", !fieldValid);
+          valid = valid && fieldValid;
+        });
+
+        const radioGroup = form.querySelector(".radio-group[data-required]");
+        const radioValid = Boolean(form.querySelector('input[name="passType"]:checked'));
+        radioGroup.classList.toggle("error", !radioValid);
+        valid = valid && radioValid;
+        return valid;
+      }
+
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        if (!validateForm()) return;
+        modal.classList.add("show");
+        document.body.classList.add("modal-open");
+        form.reset();
+      });
+
+      form.addEventListener("input", (event) => {
+        const field = event.target.closest(".field");
+        if (field) field.classList.remove("error");
+        form.querySelector(".radio-group").classList.remove("error");
+      });
+
+      function hideModal() {
+        modal.classList.remove("show");
+        document.body.classList.remove("modal-open");
+      }
+
+      closeModal.addEventListener("click", hideModal);
+      modal.addEventListener("click", (event) => {
+        if (event.target === modal) hideModal();
+      });
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") hideModal();
+      });
+
+      window.addEventListener("scroll", updateHeaderState, { passive: true });
+      window.addEventListener("resize", updateHeaderState);
+      updateCountdown();
+      updateHeaderState();
+      setInterval(updateCountdown, 1000);
+    </script>
+  </body>
+</html>
